@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.nav__container {
+  color: #fafafa;
+  background: #323232;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.nav__container-logo {
+  padding-top: 15px;
+  margin: 0;
+}
+
+.nav__container-items {
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  overflow: hidden;
+}
+
+.nav__container-bio, .nav__container-shows {
+  width: 50%;
+  text-decoration: none;
+  padding-bottom: 0.75em;
+  border-bottom: 5px solid transparent;
+}
+
+.nav__container-bio:hover, .nav__container-shows:hover {
+  border-bottom: 5px solid white;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav__container-logo {
+    padding-left: 24px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 0px;
+  }
+  .nav__container-items {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .nav__container-bio, .nav__container-shows {
+    padding-bottom: 1.5em;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 1.75em 0;
+    width: auto;
+    margin-left: 48px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav__container-logo {
+    padding-left: 180px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .nav__container-items {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .nav__container-bio, .nav__container-shows {
+    padding-bottom: 1.5em;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 1.75em 0;
+    width: auto;
+    margin-left: 56px;
+  }
+}
+
+.hero {
+  height: 183px;
+  width: 312px;
+  background-image: url("/Assets/Images/hero.jpg");
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.5em;
+  opacity: 50%;
+}
+
+.hero__artists {
+  color: #fafafa;
+  margin-left: 16px;
+}
+
+.about {
+  margin: 32px 16px 24px 16px;
+}
+
+.artists {
+  height: 162px;
+  width: 288px;
+  background-image: url("/Assets/Images/artists.jpg");
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 16px;
+  margin-bottom: 24px;
+}
+/*# sourceMappingURL=main.css.map */

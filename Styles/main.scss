@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// So far the nav is mobile friendly
+.nav__container {
+  color: #fafafa;
+  background: #323232;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+
+  &-logo {
+    padding-top: 15px;
+    margin: 0;
+  }
+
+  &-items {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    // padding-top: 16px;
+    overflow: hidden;
+  }
+
+  &-bio,
+  &-shows {
+    width: 50%;
+    // margin-top: 1rem;
+    text-decoration: none;
+    padding-bottom: 0.75em;
+    border-bottom: 5px solid transparent;
+  }
+
+  &-bio:hover,
+  &-shows:hover {
+    border-bottom: 5px solid white;
+  }
+}
+
+// Now to make it tablet friendly
+@media screen and (min-width: 768px) {
+  .nav__container {
+    flex-direction: row;
+    align-items: center;
+
+    &-logo {
+      padding-left: 24px;
+      align-items: center;
+      padding-top: 0px;
+    }
+    &-items {
+      justify-content: flex-start;
+      align-self: center;
+    }
+    &-bio,
+    &-shows {
+      // padding-left: 48px;
+      padding-bottom: 1.5em;
+      align-self: center;
+      padding: 1.75em 0;
+      width: auto;
+      margin-left: 48px;
+
+      // display: inline-block;
+    }
+  }
+}
+
+// Now to make it desktop friendly
+@media screen and (min-width: 1024px) {
+  .nav__container {
+    flex-direction: row;
+    align-items: center;
+
+    &-logo {
+      padding-left: 180px;
+
+      align-self: center;
+    }
+    &-items {
+      justify-content: flex-start;
+    }
+    &-bio,
+    &-shows {
+      // padding-left: 56px;
+      padding-bottom: 1.5em;
+      align-self: center;
+      padding: 1.75em 0;
+      width: auto;
+      margin-left: 56px;
+    }
+  }
+}
+
+// Now to fix the desktop adding
+// @media screen and (ma-width: 400px) {
+//   .nav__container {
+//     flex-direction: column;
+
+//     &-logo {
+//       padding-top: 16px;
+//     }
+//     &-items {
+//       padding: 16px;
+//     }
+//   }
+// }
+// remove the flex-direction: column;
+
+// This works well on desktop only
+.hero {
+  height: 183px;
+  width: 312px;
+  background-image: url("/Assets/Images/hero.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  font-size: 0.5em;
+  opacity: 50%;
+
+  &__artists {
+    color: #fafafa;
+    margin-left: 16px;
+  }
+}
+
+.about {
+  margin: 32px 16px 24px 16px;
+}
+
+.artists {
+  height: 162px;
+  width: 288px;
+  background-image: url("/Assets/Images/artists.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+  // margin-right: 16px;
+  margin-bottom: 24px;
+}
