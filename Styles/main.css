@@ -1,31 +1,16 @@
 @font-face {
   font-family: AvenirRegular;
-  src: url("../../assets/fonts/AvenirRegular.otf");
+  src: url("/Assets/Fonts/AvenirNextLTPro-Regular.otf");
 }
 
 @font-face {
   font-family: AvenirDemi;
-  src: url("../../assets/fonts/AvenirDemi.otf");
+  src: url("/Assets/Fonts/AvenirNextLTPro-Demi.otf");
 }
 
 @font-face {
   font-family: AvenirBold;
-  src: url("../../assets/fonts/AvenirBold.otf");
-}
-
-@font-face {
-  font-family: AvenirRegular;
-  src: url("../../assets/fonts/AvenirRegular.otf");
-}
-
-@font-face {
-  font-family: AvenirDemi;
-  src: url("../../assets/fonts/AvenirDemi.otf");
-}
-
-@font-face {
-  font-family: AvenirBold;
-  src: url("../../assets/fonts/AvenirBold.otf");
+  src: url("/Assets/Fonts/AvenirNextLTPro-Bold.otf");
 }
 
 * {
@@ -53,6 +38,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-family: AvenirRegular;
 }
 
 .nav__container-logo {
@@ -174,12 +160,14 @@
       -ms-grid-row-align: center;
       align-self: center;
   height: auto;
+  font-family: AvenirRegular;
 }
 
 .about {
   margin: 32px 16px 24px 16px;
   font-size: 24px;
   line-height: 32px;
+  font-family: AvenirBold;
 }
 
 .artist-image {
@@ -223,11 +211,101 @@
     margin-bottom: 48px;
     font-size: 24px;
     line-height: 32px;
+    font-family: AvenirBold;
   }
   .artist-image {
-    height: 450px;
     width: 896px;
     margin-top: 48px;
   }
+}
+
+.text {
+  margin: 24px 16px 40px 16px;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: AvenirDemi;
+}
+
+.text__quote {
+  margin-bottom: 32px;
+}
+
+.bio {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.bio-title {
+  font-family: AvenirBold;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+@media screen and (min-width: 768px) {
+  .text,
+  .bio {
+    font-size: 24px;
+    line-height: 32px;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  __quote {
+    font-family: AvenirBold;
+  }
+  __quote-author {
+    font-family: AvenirDemi;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .text,
+  .bio {
+    margin: 48px 262px 56px 262px;
+  }
+  __quote {
+    margin-bottom: 40px;
+  }
+  -author {
+    margin-bottom: 56px;
+  }
+}
+
+#bio-title {
+  margin-bottom: 24px;
+}
+
+.bio {
+  margin-top: 24px;
+  margin-bottom: 40px;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.bio__paragraphs-one {
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .bio__paragraphs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.gallery__title {
+  font-size: 24px;
+  line-height: 32px;
+  margin: 32px 16px 24px 16px;
+}
+
+.gallery__image1 {
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
 }
 /*# sourceMappingURL=main.css.map */

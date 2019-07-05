@@ -1,10 +1,11 @@
 @import "./partials/fonts";
-@import "./partials/fonts";
+@import "./partials/colors";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  // font-family: AvenirRegular;
 }
 
 // So far the nav is mobile friendly
@@ -17,6 +18,7 @@
   width: 100%;
   align-items: center;
   flex-direction: column;
+  font-family: AvenirRegular;
 
   &-logo {
     padding-top: 15px;
@@ -115,6 +117,7 @@
     line-height: 32px;
     align-self: center;
     height: auto;
+    font-family: AvenirRegular;
   }
 }
 
@@ -122,6 +125,7 @@
   margin: 32px 16px 24px 16px;
   font-size: 24px;
   line-height: 32px;
+  font-family: AvenirBold;
 }
 
 .artist-image {
@@ -168,23 +172,114 @@
     margin-bottom: 48px;
     font-size: 24px;
     line-height: 32px;
+    font-family: AvenirBold;
   }
 
   .artist-image {
-    height: 450px;
+    // height: 450px;
     width: 896px;
     margin-top: 48px;
   }
 }
 
-// .artists {
-//   height: 162px;
-//   width: 288px;
-//   background-image: url("/Assets/Images/artists.jpg");
-//   background-size: cover;
-//   display: flex;
-//   align-items: center;
-//   margin-left: 16px;
-//   // margin-right: 16px;
-//   margin-bottom: 24px;
-// }
+// The text view mobile friendly
+.text {
+  margin: 24px 16px 40px 16px;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: AvenirDemi;
+
+  &__quote {
+    margin-bottom: 32px;
+  }
+}
+
+.bio {
+  // font-size: 13px;
+  // line-height: 18px;
+  // margin-bottom: 24px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.bio-title {
+  font-family: AvenirBold;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+// The text view on tablet
+@media screen and (min-width: 768px) {
+  .text,
+  .bio {
+    font-size: 24px;
+    line-height: 32px;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  &__quote {
+    font-family: AvenirBold;
+
+    &-author {
+      font-family: AvenirDemi;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+
+// The text view on desktop
+@media screen and (min-width: 1024px) {
+  .text,
+  .bio {
+    margin: 48px 262px 56px 262px;
+  }
+  &__quote {
+    margin-bottom: 40px;
+  }
+  &-author {
+    margin-bottom: 56px;
+  }
+}
+
+//for the block text title
+#bio-title {
+  margin-bottom: 24px;
+}
+
+//For the paragraph blocks on mobile
+.bio {
+  margin-top: 24px;
+  margin-bottom: 40px;
+  font-size: 13px;
+  line-height: 18px;
+
+  &__paragraphs-one {
+    margin-bottom: 40px;
+  }
+}
+
+//NOT SURE HOW TO INCLUDE THAT SPACE
+@media screen and (min-width: 768px) {
+  .bio__paragraphs {
+    display: flex;
+  }
+}
+
+// photo gallert for mobile
+
+.gallery__title {
+  font-size: 24px;
+  line-height: 32px;
+  margin: 32px 16px 24px 16px;
+}
+
+.gallery__image1 {
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+}
+
+//Now the photo gallery on des
