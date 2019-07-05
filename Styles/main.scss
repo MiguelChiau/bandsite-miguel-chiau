@@ -1,3 +1,6 @@
+@import "./partials/fonts";
+@import "./partials/fonts";
+
 * {
   margin: 0;
   padding: 0;
@@ -25,14 +28,13 @@
     text-align: center;
     display: flex;
     justify-content: space-around;
-    // padding-top: 16px;
     overflow: hidden;
   }
 
   &-bio,
   &-shows {
     width: 50%;
-    // margin-top: 1rem;
+
     text-decoration: none;
     padding-bottom: 0.75em;
     border-bottom: 5px solid transparent;
@@ -61,14 +63,11 @@
     }
     &-bio,
     &-shows {
-      // padding-left: 48px;
       padding-bottom: 1.5em;
       align-self: center;
       padding: 1.75em 0;
       width: auto;
       margin-left: 48px;
-
-      // display: inline-block;
     }
   }
 }
@@ -89,7 +88,6 @@
     }
     &-bio,
     &-shows {
-      // padding-left: 56px;
       padding-bottom: 1.5em;
       align-self: center;
       padding: 1.75em 0;
@@ -99,50 +97,94 @@
   }
 }
 
-// Now to fix the desktop adding
-// @media screen and (ma-width: 400px) {
-//   .nav__container {
-//     flex-direction: column;
-
-//     &-logo {
-//       padding-top: 16px;
-//     }
-//     &-items {
-//       padding: 16px;
-//     }
-//   }
-// }
-// remove the flex-direction: column;
-
-// This works well on desktop only
+// The hero image for mobile
 .hero {
   height: 183px;
-  width: 312px;
+  width: 100%;
   background-image: url("/Assets/Images/hero.jpg");
   background-size: cover;
   display: flex;
-  align-items: center;
-  font-size: 0.5em;
-  opacity: 50%;
+  justify-content: center;
+  display: flex;
+  background-repeat: no-repeat;
 
   &__artists {
-    color: #fafafa;
-    margin-left: 16px;
+    color: white;
+    padding-left: 16px;
+    font-size: 24px;
+    line-height: 32px;
+    align-self: center;
+    height: auto;
   }
 }
 
 .about {
   margin: 32px 16px 24px 16px;
+  font-size: 24px;
+  line-height: 32px;
 }
 
-.artists {
-  height: 162px;
-  width: 288px;
-  background-image: url("/Assets/Images/artists.jpg");
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  margin-left: 16px;
-  // margin-right: 16px;
-  margin-bottom: 24px;
+.artist-image {
+  // max-width: 288px;
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+// For tablet
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 400px;
+  }
+  &__artists {
+    margin-left: 24px;
+    font-size: 60px;
+    line-height: 68px;
+  }
+  .about {
+    margin-left: 24px;
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .artist-image {
+    height: auto;
+  }
+}
+
+// For desktop
+@media screen and (min-width: 1024px) {
+  .hero {
+    height: 670px;
+  }
+  &__artists {
+    margin-left: 180px;
+    font-size: 60px;
+    line-height: 68px;
+  }
+  .about {
+    margin-top: 48px;
+    margin-left: 180px;
+    margin-bottom: 48px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .artist-image {
+    height: 450px;
+    width: 896px;
+    margin-top: 48px;
+  }
+}
+
+// .artists {
+//   height: 162px;
+//   width: 288px;
+//   background-image: url("/Assets/Images/artists.jpg");
+//   background-size: cover;
+//   display: flex;
+//   align-items: center;
+//   margin-left: 16px;
+//   // margin-right: 16px;
+//   margin-bottom: 24px;
+// }

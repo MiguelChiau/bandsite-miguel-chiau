@@ -1,3 +1,33 @@
+@font-face {
+  font-family: AvenirRegular;
+  src: url("../../assets/fonts/AvenirRegular.otf");
+}
+
+@font-face {
+  font-family: AvenirDemi;
+  src: url("../../assets/fonts/AvenirDemi.otf");
+}
+
+@font-face {
+  font-family: AvenirBold;
+  src: url("../../assets/fonts/AvenirBold.otf");
+}
+
+@font-face {
+  font-family: AvenirRegular;
+  src: url("../../assets/fonts/AvenirRegular.otf");
+}
+
+@font-face {
+  font-family: AvenirDemi;
+  src: url("../../assets/fonts/AvenirDemi.otf");
+}
+
+@font-face {
+  font-family: AvenirBold;
+  src: url("../../assets/fonts/AvenirBold.otf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -122,40 +152,82 @@
 
 .hero {
   height: 183px;
-  width: 312px;
+  width: 100%;
   background-image: url("/Assets/Images/hero.jpg");
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 0.5em;
-  opacity: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: flex;
+  background-repeat: no-repeat;
 }
 
 .hero__artists {
-  color: #fafafa;
-  margin-left: 16px;
+  color: white;
+  padding-left: 16px;
+  font-size: 24px;
+  line-height: 32px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: auto;
 }
 
 .about {
   margin: 32px 16px 24px 16px;
+  font-size: 24px;
+  line-height: 32px;
 }
 
-.artists {
-  height: 162px;
-  width: 288px;
-  background-image: url("/Assets/Images/artists.jpg");
-  background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 16px;
-  margin-bottom: 24px;
+.artist-image {
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 400px;
+  }
+  __artists {
+    margin-left: 24px;
+    font-size: 60px;
+    line-height: 68px;
+  }
+  .about {
+    margin-left: 24px;
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .artist-image {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    height: 670px;
+  }
+  __artists {
+    margin-left: 180px;
+    font-size: 60px;
+    line-height: 68px;
+  }
+  .about {
+    margin-top: 48px;
+    margin-left: 180px;
+    margin-bottom: 48px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .artist-image {
+    height: 450px;
+    width: 896px;
+    margin-top: 48px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
