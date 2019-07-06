@@ -182,7 +182,7 @@
   }
 }
 
-// The text view mobile friendly
+// Quote view mobile friendly
 .text {
   margin: 24px 16px 40px 16px;
   font-size: 14px;
@@ -194,24 +194,52 @@
   }
 }
 
-.bio {
-  // font-size: 13px;
-  // line-height: 18px;
-  // margin-bottom: 24px;
-  margin-left: 16px;
-  margin-right: 16px;
+// Quote view tablet friendly
+@media screen and (min-width: 768px) {
+  .text {
+    margin-left: 24px;
+    margin-right: 24px;
+
+    &__quote {
+      font-size: 24px;
+      line-height: 32px;
+      font-family: AvenirBold;
+      margin-top: 50px;
+
+      &-author {
+        font-size: 16px;
+        line-height: 24px;
+        font-family: AvenirDemi;
+      }
+    }
+  }
 }
 
-.bio-title {
-  font-family: AvenirBold;
-  font-size: 14px;
-  line-height: 22px;
+// Quote on desktop
+@media screen and (min-width: 1024px) {
+  .bio-title {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: AvenirBold;
+
+    &__quote {
+      font-size: 24px;
+      line-height: 32px;
+      font-family: AvenirBold;
+      margin-top: 48px;
+
+      &-author {
+        font-size: 16px;
+        line-height: 24px;
+        font-family: AvenirDemi;
+      }
+    }
+  }
 }
 
 // The text view on tablet
 @media screen and (min-width: 768px) {
-  .text,
-  .bio {
+  .text {
     font-size: 24px;
     line-height: 32px;
     margin-left: 24px;
@@ -230,8 +258,7 @@
 
 // The text view on desktop
 @media screen and (min-width: 1024px) {
-  .text,
-  .bio {
+  .text {
     margin: 48px 262px 56px 262px;
   }
   &__quote {
@@ -242,36 +269,91 @@
   }
 }
 
-//for the block text title
-#bio-title {
-  margin-bottom: 24px;
+// MOBILE Bio-tittle
+.bio {
+  margin-left: 16px;
+  margin-right: 16px;
+
+  &-title {
+    font-family: AvenirBold;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 24px;
+  }
 }
 
-//For the paragraph blocks on mobile
-.bio {
+// TABLET Bio-tittle
+@media screen and (min-width: 768px) {
+  .bio {
+    margin-left: 24px;
+    margin-right: 24px;
+
+    &-title {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+}
+// DESKTOP Bio-tittle
+@media screen and (min-width: 1024px) {
+  .bio {
+    margin-left: 262px;
+    margin-right: 262px;
+
+    &-title {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 32px;
+    }
+  }
+}
+
+//PARAGRAPH ON MOBILE
+.bio__paragraphs {
   margin-top: 24px;
   margin-bottom: 40px;
   font-size: 13px;
   line-height: 18px;
+  font-family: AvenirRegular;
 
-  &__paragraphs-one {
-    margin-bottom: 40px;
+  &-one {
+    margin-bottom: 24px;
   }
 }
 
-//NOT SURE HOW TO INCLUDE THAT SPACE
+//PARAGRAPH ON TABLET
 @media screen and (min-width: 768px) {
   .bio__paragraphs {
     display: flex;
+    font-size: 14px;
+    line-height: 22px;
+
+    &-one {
+      margin-right: 24px;
+    }
+  }
+}
+
+//PARAGRAPH ON DESKTOP
+@media screen and (min-width: 1024px) {
+  .bio__paragraphs {
+    display: flex;
+    font-size: 14px;
+    line-height: 22px;
+
+    &-one {
+      margin-right: 40px;
+    }
   }
 }
 
 // photo gallert for mobile
-
 .gallery__title {
   font-size: 24px;
   line-height: 32px;
   margin: 32px 16px 24px 16px;
+  font-family: AvenirBold;
+  background-color: #fafafa;
 }
 
 .gallery__image1 {
@@ -282,4 +364,51 @@
   margin-bottom: 16px;
 }
 
-//Now the photo gallery on des
+// photo gallert for TABLET
+@media screen and (min-width: 768px) {
+  .gallery__title {
+    font-size: 36px;
+    line-height: 44px;
+    background-color: #fafafa;
+  }
+
+  .images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .gallery__image1 {
+    height: 126px;
+    width: 224px;
+    margin: 24px;
+  }
+}
+
+// photo gallert for DESKTOP
+@media screen and (min-width: 1024px) {
+  .gallery {
+    background-color: #fafafa;
+  }
+  .gallery__title {
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 64px;
+    margin-left: 180px;
+    margin-right: 180px;
+    // margin-top: 48px;
+  }
+
+  .images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // margin-bottom: 40px;
+  }
+
+  .gallery__image1 {
+    height: 193px;
+    width: 344px;
+    margin: 24px;
+  }
+}

@@ -230,20 +230,45 @@
   margin-bottom: 32px;
 }
 
-.bio {
-  margin-left: 16px;
-  margin-right: 16px;
+@media screen and (min-width: 768px) {
+  .text {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  .text__quote {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: AvenirBold;
+    margin-top: 50px;
+  }
+  .text__quote-author {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: AvenirDemi;
+  }
 }
 
-.bio-title {
-  font-family: AvenirBold;
-  font-size: 14px;
-  line-height: 22px;
+@media screen and (min-width: 1024px) {
+  .bio-title {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: AvenirBold;
+  }
+  .bio-title__quote {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: AvenirBold;
+    margin-top: 48px;
+  }
+  .bio-title__quote-author {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: AvenirDemi;
+  }
 }
 
 @media screen and (min-width: 768px) {
-  .text,
-  .bio {
+  .text {
     font-size: 24px;
     line-height: 32px;
     margin-left: 24px;
@@ -260,8 +285,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .text,
-  .bio {
+  .text {
     margin: 48px 262px 56px 262px;
   }
   __quote {
@@ -272,19 +296,51 @@
   }
 }
 
-#bio-title {
+.bio {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.bio-title {
+  font-family: AvenirBold;
+  font-size: 14px;
+  line-height: 22px;
   margin-bottom: 24px;
 }
 
-.bio {
+@media screen and (min-width: 768px) {
+  .bio {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  .bio-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bio {
+    margin-left: 262px;
+    margin-right: 262px;
+  }
+  .bio-title {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 32px;
+  }
+}
+
+.bio__paragraphs {
   margin-top: 24px;
   margin-bottom: 40px;
   font-size: 13px;
   line-height: 18px;
+  font-family: AvenirRegular;
 }
 
 .bio__paragraphs-one {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 @media screen and (min-width: 768px) {
@@ -292,6 +348,24 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .bio__paragraphs-one {
+    margin-right: 24px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bio__paragraphs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .bio__paragraphs-one {
+    margin-right: 40px;
   }
 }
 
@@ -299,6 +373,8 @@
   font-size: 24px;
   line-height: 32px;
   margin: 32px 16px 24px 16px;
+  font-family: AvenirBold;
+  background-color: #fafafa;
 }
 
 .gallery__image1 {
@@ -307,5 +383,56 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery__title {
+    font-size: 36px;
+    line-height: 44px;
+    background-color: #fafafa;
+  }
+  .images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .gallery__image1 {
+    height: 126px;
+    width: 224px;
+    margin: 24px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .gallery {
+    background-color: #fafafa;
+  }
+  .gallery__title {
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 64px;
+    margin-left: 180px;
+    margin-right: 180px;
+  }
+  .images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .gallery__image1 {
+    height: 193px;
+    width: 344px;
+    margin: 24px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
