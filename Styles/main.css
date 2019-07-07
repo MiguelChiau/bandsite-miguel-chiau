@@ -452,24 +452,33 @@ footer {
   font-family: AvenirRegular;
 }
 
-.title {
+.social {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.social__title {
   font-size: 24px;
   line-height: 32px;
   font-family: AvenirBold;
   color: white;
-  margin-left: 15px;
-  padding-top: 64px;
+  padding-top: 60px;
 }
 
-.icon {
+.social__icons {
   padding-top: 32px;
-  margin-left: 15px;
+}
+
+.social__icons-instagram {
   margin-right: 20px;
 }
 
-.logo {
+.social__icons-facebook {
+  margin-right: 20px;
+}
+
+.social__logo {
   padding-top: 32px;
-  margin-left: 15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -518,14 +527,22 @@ footer {
         -ms-flex-align: center;
             align-items: center;
     margin-left: 180px;
+    margin-right: 180px;
   }
   .logo {
     padding-top: 0px;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
     padding-top: 48px;
-    margin-left: 490px;
+    margin-left: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .log {
+    width: 120px;
+    height: 24px;
     margin-right: 180px;
   }
   .icon {
@@ -571,5 +588,54 @@ footer {
 
 .contact__email {
   padding-bottom: 32px;
+}
+
+.copyright {
+  font-family: AvenirRegular;
+  margin: 0px 16px;
+  color: white;
+  font-size: 13px;
+  line-height: 18px;
+  padding-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    font-family: AvenirRegular;
+    margin-top: 40px;
+    margin-right: 24px;
+    margin-left: 24px;
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .contact__title {
+    margin-right: 24px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .contact {
+    font-family: AvenirRegular;
+    margin-top: 56px;
+    margin-right: 180px;
+    margin-left: 180px;
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .contact__title {
+    margin-right: 24px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

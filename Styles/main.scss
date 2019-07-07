@@ -429,24 +429,34 @@ footer {
   background: #323232;
   font-family: AvenirRegular;
 }
-.title {
-  font-size: 24px;
-  line-height: 32px;
-  font-family: AvenirBold;
-  color: white;
-  margin-left: 15px;
-  padding-top: 64px;
-}
 
-.icon {
-  padding-top: 32px;
+.social {
   margin-left: 15px;
-  margin-right: 20px;
-}
+  margin-right: 15px;
 
-.logo {
-  padding-top: 32px;
-  margin-left: 15px;
+  &__title {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: AvenirBold;
+    color: white;
+    padding-top: 60px;
+  }
+
+  &__icons {
+    padding-top: 32px;
+
+    &-instagram {
+      margin-right: 20px;
+    }
+
+    &-facebook {
+      margin-right: 20px;
+    }
+  }
+
+  &__logo {
+    padding-top: 32px;
+  }
 }
 
 // footer on TABLET
@@ -487,14 +497,31 @@ footer {
     display: flex;
     align-items: center;
     margin-left: 180px;
+    margin-right: 180px;
+
+    // justify-content: flex-start;
   }
 
   .logo {
     padding-top: 0px;
-    align-self: center;
+    // align-self: center;
     padding-top: 48px;
-    margin-left: 490px;
+    // margin-left: 490px;
+    // margin-left: 180px;
+
+    margin-left: 0px;
+    // margin-right: 180px;
+    display: flex;
+    justify-content: flex-end;
+    // width: 120px;
+    // height: 24px;
+  }
+
+  .log {
+    width: 120px;
+    height: 24px;
     margin-right: 180px;
+    // margin-left: 490px;
   }
 
   .icon {
@@ -538,5 +565,53 @@ footer {
 
   &__email {
     padding-bottom: 32px;
+  }
+}
+.copyright {
+  font-family: AvenirRegular;
+  margin: 0px 16px;
+  color: white;
+  font-size: 13px;
+  line-height: 18px;
+  padding-bottom: 40px;
+}
+
+// Contact for TABLET
+@media screen and (min-width: 768px) {
+  .contact {
+    font-family: AvenirRegular;
+    margin-top: 40px;
+    margin-right: 24px;
+    margin-left: 24px;
+
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__title {
+      margin-right: 24px;
+    }
+  }
+}
+
+// Contact for DESKTOP
+@media screen and (min-width: 1440px) {
+  .contact {
+    font-family: AvenirRegular;
+    margin-top: 56px;
+    margin-right: 180px;
+    margin-left: 180px;
+
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__title {
+      margin-right: 24px;
+    }
   }
 }
