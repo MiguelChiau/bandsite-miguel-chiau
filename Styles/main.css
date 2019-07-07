@@ -449,6 +449,7 @@
 
 footer {
   background: #323232;
+  font-family: AvenirRegular;
 }
 
 .title {
@@ -546,5 +547,29 @@ footer {
         align-self: center;
     padding-top: 48px;
   }
+}
+
+.contact {
+  font-family: AvenirRegular;
+  margin: 40px 16px;
+  color: white;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.contact__name, .contact__title {
+  font-family: AvenirDemi;
+}
+
+.contact__title {
+  padding-bottom: 32px;
+}
+
+.contact__location {
+  padding-bottom: 32px;
+}
+
+.contact__email {
+  padding-bottom: 32px;
 }
 /*# sourceMappingURL=main.css.map */
