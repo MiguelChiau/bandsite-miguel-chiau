@@ -75,7 +75,7 @@
 }
 
 // Now to make it desktop friendly
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .nav__container {
     flex-direction: row;
     align-items: center;
@@ -157,7 +157,7 @@
 }
 
 // For desktop
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .hero {
     height: 670px;
   }
@@ -216,7 +216,7 @@
 }
 
 // Quote on desktop
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .bio-title {
     font-size: 16px;
     line-height: 24px;
@@ -257,7 +257,7 @@
 }
 
 // The text view on desktop
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .text {
     margin: 48px 262px 56px 262px;
   }
@@ -295,7 +295,7 @@
   }
 }
 // DESKTOP Bio-tittle
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .bio {
     margin-left: 262px;
     margin-right: 262px;
@@ -335,7 +335,7 @@
 }
 
 //PARAGRAPH ON DESKTOP
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .bio__paragraphs {
     display: flex;
     font-size: 14px;
@@ -348,20 +348,28 @@
 }
 
 // photo gallert for mobile
-.gallery__title {
-  font-size: 24px;
-  line-height: 32px;
-  margin: 32px 16px 24px 16px;
-  font-family: AvenirBold;
+.gallery {
   background-color: #fafafa;
+  padding-top: 32px;
+
+  &__title {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0px 16px 24px 16px;
+    font-family: AvenirBold;
+  }
 }
 
-.gallery__image1 {
-  width: 90%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 16px;
+.images {
+  margin-bottom: 32px;
+
+  &__all {
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+  }
 }
 
 // photo gallert for TABLET
@@ -370,45 +378,140 @@
     font-size: 36px;
     line-height: 44px;
     background-color: #fafafa;
+    margin: 0px 24px 24px 32px;
   }
 
   .images {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
+    margin-bottom: 24px;
 
-  .gallery__image1 {
-    height: 126px;
-    width: 224px;
-    margin: 24px;
+    &__all {
+      height: 126px;
+      width: 224px;
+      margin-bottom: 24px;
+      margin-left: 24px;
+    }
   }
 }
 
 // photo gallert for DESKTOP
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .gallery {
-    background-color: #fafafa;
-  }
-  .gallery__title {
-    font-size: 36px;
-    line-height: 44px;
-    margin-bottom: 64px;
-    margin-left: 180px;
-    margin-right: 180px;
-    // margin-top: 48px;
+    padding-top: 48px;
+
+    &__title {
+      font-size: 36px;
+      line-height: 44px;
+      margin: 0px 180px 64px 180px;
+    }
   }
 
   .images {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    // margin-bottom: 40px;
+    margin-bottom: 16px;
+
+    &__all {
+      height: 193px;
+      width: 344px;
+      margin-bottom: 24px;
+      margin-left: 24px;
+    }
+  }
+}
+
+// footer on MOBILE, Note that mobile version doesn't include logo on footer
+
+footer {
+  background: #323232;
+}
+.title {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: AvenirBold;
+  color: white;
+  margin-left: 15px;
+  padding-top: 64px;
+}
+
+.icon {
+  padding-top: 32px;
+  margin-left: 15px;
+  margin-right: 20px;
+}
+
+.logo {
+  padding-top: 32px;
+  margin-left: 15px;
+}
+
+// footer on TABLET
+@media screen and (min-width: 768px) {
+  .social {
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
+    margin-left: 24px;
   }
 
-  .gallery__image1 {
-    height: 193px;
-    width: 344px;
-    margin: 24px;
+  .logo {
+    padding-top: 0px;
+    align-self: center;
+    margin-left: 160px;
+  }
+
+  .icon {
+    padding-top: 0px;
+    align-self: center;
+  }
+
+  .icons {
+    margin-left: 48px;
+  }
+  .title {
+    font-size: 36px;
+    line-height: 44px;
+    // margin-left: 24px;
+    align-self: center;
+    padding-top: 0px;
+  }
+}
+
+// footer on DESKTOP
+@media screen and (min-width: 1440px) {
+  .social {
+    display: flex;
+    align-items: center;
+    // margin-left: 180px;
+    margin-left: 180px;
+  }
+
+  .logo {
+    padding-top: 0px;
+    align-self: center;
+    // margin-left: 200px;
+    padding-top: 48px;
+    margin-left: 490px;
+    margin-right: 180px;
+  }
+
+  .icon {
+    padding-top: 0px;
+    align-self: center;
+    padding-top: 48px;
+  }
+
+  .icons {
+    margin-left: 48px;
+  }
+  .title {
+    font-size: 36px;
+    line-height: 44px;
+    margin-left: px;
+    align-self: center;
+    padding-top: 48px;
   }
 }

@@ -104,7 +104,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .nav__container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -196,7 +196,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .hero {
     height: 670px;
   }
@@ -248,7 +248,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .bio-title {
     font-size: 16px;
     line-height: 24px;
@@ -284,7 +284,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .text {
     margin: 48px 262px 56px 262px;
   }
@@ -319,7 +319,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .bio {
     margin-left: 262px;
     margin-right: 262px;
@@ -356,7 +356,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .bio__paragraphs {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -369,15 +369,23 @@
   }
 }
 
+.gallery {
+  background-color: #fafafa;
+  padding-top: 32px;
+}
+
 .gallery__title {
   font-size: 24px;
   line-height: 32px;
-  margin: 32px 16px 24px 16px;
+  margin: 0px 16px 24px 16px;
   font-family: AvenirBold;
-  background-color: #fafafa;
 }
 
-.gallery__image1 {
+.images {
+  margin-bottom: 32px;
+}
+
+.images__all {
   width: 90%;
   display: block;
   margin-left: auto;
@@ -390,6 +398,7 @@
     font-size: 36px;
     line-height: 44px;
     background-color: #fafafa;
+    margin: 0px 24px 24px 32px;
   }
   .images {
     display: -webkit-box;
@@ -400,24 +409,24 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-bottom: 24px;
   }
-  .gallery__image1 {
+  .images__all {
     height: 126px;
     width: 224px;
-    margin: 24px;
+    margin-bottom: 24px;
+    margin-left: 24px;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .gallery {
-    background-color: #fafafa;
+    padding-top: 48px;
   }
   .gallery__title {
     font-size: 36px;
     line-height: 44px;
-    margin-bottom: 64px;
-    margin-left: 180px;
-    margin-right: 180px;
+    margin: 0px 180px 64px 180px;
   }
   .images {
     display: -webkit-box;
@@ -428,11 +437,114 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-bottom: 16px;
   }
-  .gallery__image1 {
+  .images__all {
     height: 193px;
     width: 344px;
-    margin: 24px;
+    margin-bottom: 24px;
+    margin-left: 24px;
+  }
+}
+
+footer {
+  background: #323232;
+}
+
+.title {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: AvenirBold;
+  color: white;
+  margin-left: 15px;
+  padding-top: 64px;
+}
+
+.icon {
+  padding-top: 32px;
+  margin-left: 15px;
+  margin-right: 20px;
+}
+
+.logo {
+  padding-top: 32px;
+  margin-left: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 24px;
+    margin-left: 24px;
+  }
+  .logo {
+    padding-top: 0px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-left: 160px;
+  }
+  .icon {
+    padding-top: 0px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .icons {
+    margin-left: 48px;
+  }
+  .title {
+    font-size: 36px;
+    line-height: 44px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding-top: 0px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 180px;
+  }
+  .logo {
+    padding-top: 0px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding-top: 48px;
+    margin-left: 490px;
+    margin-right: 180px;
+  }
+  .icon {
+    padding-top: 0px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding-top: 48px;
+  }
+  .icons {
+    margin-left: 48px;
+  }
+  .title {
+    font-size: 36px;
+    line-height: 44px;
+    margin-left: px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding-top: 48px;
   }
 }
 /*# sourceMappingURL=main.css.map */
