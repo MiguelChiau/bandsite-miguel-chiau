@@ -8,10 +8,10 @@
   // font-family: AvenirRegular;
 }
 
-// So far the nav is mobile friendly
+// So far the nav bar is mobile friendly
 .nav__container {
-  color: #fafafa;
-  background: #323232;
+  color: $mercury;
+  background: $black;
   display: flex;
   justify-content: space-between;
   height: 80px;
@@ -44,7 +44,12 @@
 
   &-bio:hover,
   &-shows:hover {
-    border-bottom: 5px solid white;
+    border-bottom: 5px solid $white;
+  }
+
+  a:hover,
+  a:active {
+    color: $white;
   }
 }
 
@@ -104,20 +109,22 @@
   height: 183px;
   width: 100%;
   background-image: url("/Assets/Images/hero.jpg");
-  background-size: cover;
-  display: flex;
-  justify-content: center;
+  // This will make the background image to stretch and cover the full area
+  background-size: 100% 100%;
   display: flex;
   background-repeat: no-repeat;
 
   &__artists {
-    color: white;
-    padding-left: 16px;
+    color: $white;
+    align-self: center;
+    margin-left: 16px;
     font-size: 24px;
     line-height: 32px;
-    align-self: center;
-    height: auto;
-    font-family: AvenirRegular;
+    font-family: AvenirBold;
+
+    &-name {
+      padding-bottom: 5px;
+    }
   }
 }
 
@@ -129,7 +136,6 @@
 }
 
 .artist-image {
-  // max-width: 288px;
   width: 90%;
   display: block;
   margin-left: auto;
@@ -140,12 +146,18 @@
 @media screen and (min-width: 768px) {
   .hero {
     height: 400px;
+
+    &__artists {
+      margin-left: 24px;
+      font-size: 60px;
+      line-height: 68px;
+
+      &-name {
+        padding-bottom: 10px;
+      }
+    }
   }
-  &__artists {
-    margin-left: 24px;
-    font-size: 60px;
-    line-height: 68px;
-  }
+
   .about {
     margin-left: 24px;
     font-size: 36px;
@@ -160,23 +172,28 @@
 @media screen and (min-width: 1440px) {
   .hero {
     height: 670px;
+
+    &__artists {
+      margin-left: 180px;
+      font-size: 60px;
+      line-height: 68px;
+
+      &-name {
+        padding-bottom: 25px;
+      }
+    }
   }
-  &__artists {
-    margin-left: 180px;
-    font-size: 60px;
-    line-height: 68px;
-  }
+
   .about {
     margin-top: 48px;
     margin-left: 180px;
     margin-bottom: 48px;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 36px;
+    line-height: 44px;
     font-family: AvenirBold;
   }
 
   .artist-image {
-    // height: 450px;
     width: 896px;
     margin-top: 48px;
   }
@@ -269,7 +286,7 @@
   }
 }
 
-// MOBILE Bio-tittle
+// MOBILE Biography title
 .bio {
   margin-left: 16px;
   margin-right: 16px;
@@ -349,7 +366,7 @@
 
 // photo gallert for mobile
 .gallery {
-  background-color: #fafafa;
+  background-color: $alabaster;
   padding-top: 32px;
 
   &__title {
@@ -377,7 +394,7 @@
   .gallery__title {
     font-size: 36px;
     line-height: 44px;
-    background-color: #fafafa;
+    // background-color: #fafafa;
     margin: 0px 24px 24px 32px;
   }
 
@@ -423,10 +440,10 @@
   }
 }
 
-// footer on MOBILE, Note that mobile version doesn't include logo on footer
+// footer on MOBILE, note that mobile version doesn't include logo on footer
 
 footer {
-  background: #323232;
+  background: $black;
   font-family: AvenirRegular;
 }
 
@@ -438,7 +455,7 @@ footer {
     font-size: 24px;
     line-height: 32px;
     font-family: AvenirBold;
-    color: white;
+    color: $white;
     padding-top: 60px;
   }
 
@@ -471,8 +488,6 @@ footer {
     &__title {
       font-size: 36px;
       line-height: 44px;
-      font-family: AvenirBold;
-      color: white;
       padding-top: 60px;
     }
 
@@ -491,8 +506,9 @@ footer {
       }
     }
     &__logo {
+      // Now to make the logo appear
       visibility: visible;
-      margin-left: 200px;
+      margin-left: 180px;
       padding-top: 60px;
     }
   }
@@ -509,8 +525,6 @@ footer {
     &__title {
       font-size: 36px;
       line-height: 44px;
-      font-family: AvenirBold;
-      color: white;
       padding-top: 48px;
     }
 
@@ -531,7 +545,7 @@ footer {
     &__logo {
       visibility: visible;
       display: flex;
-      margin-left: 500px;
+      margin-left: 530px;
       padding-top: 48px;
     }
   }
@@ -541,13 +555,14 @@ footer {
 .contact {
   font-family: AvenirRegular;
   margin: 20px 16px 0px 16px;
-  color: white;
+  color: $mercury;
   font-size: 13px;
   line-height: 18px;
 
   &__name,
   &__title {
     font-family: AvenirDemi;
+    color: $white;
   }
 
   &__title {
@@ -564,7 +579,7 @@ footer {
 .copyright {
   font-family: AvenirRegular;
   margin: 0px 16px;
-  color: white;
+  color: $mercury;
   font-size: 13px;
   line-height: 18px;
   padding-bottom: 40px;
@@ -573,7 +588,6 @@ footer {
 // Contact for TABLET
 @media screen and (min-width: 768px) {
   .contact {
-    font-family: AvenirRegular;
     margin: 40px 24px;
     font-size: 14px;
     line-height: 20px;
@@ -603,6 +617,12 @@ footer {
     line-height: 20px;
     padding-bottom: 40px;
     padding-top: 0px;
+
+    // This is to put the paragraphs on the same line
+    display: flex;
+    &__flex {
+      padding-left: 5px;
+    }
   }
 }
 

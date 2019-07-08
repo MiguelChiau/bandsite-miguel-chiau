@@ -21,7 +21,7 @@
 }
 
 .nav__container {
-  color: #fafafa;
+  color: #e1e1e1;
   background: #323232;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -65,7 +65,12 @@
 }
 
 .nav__container-bio:hover, .nav__container-shows:hover {
-  border-bottom: 5px solid white;
+  border-bottom: 5px solid #ffffff;
+}
+
+.nav__container a:hover,
+.nav__container a:active {
+  color: #ffffff;
 }
 
 @media screen and (min-width: 768px) {
@@ -140,27 +145,26 @@
   height: 183px;
   width: 100%;
   background-image: url("/Assets/Images/hero.jpg");
-  background-size: cover;
+  background-size: 100% 100%;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   display: flex;
   background-repeat: no-repeat;
 }
 
 .hero__artists {
-  color: white;
-  padding-left: 16px;
-  font-size: 24px;
-  line-height: 32px;
+  color: #ffffff;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  height: auto;
-  font-family: AvenirRegular;
+  margin-left: 16px;
+  font-size: 24px;
+  line-height: 32px;
+  font-family: AvenirBold;
+}
+
+.hero__artists-name {
+  padding-bottom: 5px;
 }
 
 .about {
@@ -181,10 +185,13 @@
   .hero {
     height: 400px;
   }
-  __artists {
+  .hero__artists {
     margin-left: 24px;
     font-size: 60px;
     line-height: 68px;
+  }
+  .hero__artists-name {
+    padding-bottom: 10px;
   }
   .about {
     margin-left: 24px;
@@ -200,17 +207,20 @@
   .hero {
     height: 670px;
   }
-  __artists {
+  .hero__artists {
     margin-left: 180px;
     font-size: 60px;
     line-height: 68px;
+  }
+  .hero__artists-name {
+    padding-bottom: 25px;
   }
   .about {
     margin-top: 48px;
     margin-left: 180px;
     margin-bottom: 48px;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 36px;
+    line-height: 44px;
     font-family: AvenirBold;
   }
   .artist-image {
@@ -397,7 +407,6 @@
   .gallery__title {
     font-size: 36px;
     line-height: 44px;
-    background-color: #fafafa;
     margin: 0px 24px 24px 32px;
   }
   .images {
@@ -461,7 +470,7 @@ footer {
   font-size: 24px;
   line-height: 32px;
   font-family: AvenirBold;
-  color: white;
+  color: #ffffff;
   padding-top: 60px;
 }
 
@@ -495,8 +504,6 @@ footer {
   .social__title {
     font-size: 36px;
     line-height: 44px;
-    font-family: AvenirBold;
-    color: white;
     padding-top: 60px;
   }
   .social__icons {
@@ -513,7 +520,7 @@ footer {
   }
   .social__logo {
     visibility: visible;
-    margin-left: 200px;
+    margin-left: 180px;
     padding-top: 60px;
   }
 }
@@ -532,8 +539,6 @@ footer {
   .social__title {
     font-size: 36px;
     line-height: 44px;
-    font-family: AvenirBold;
-    color: white;
     padding-top: 48px;
   }
   .social__icons {
@@ -553,7 +558,7 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-left: 500px;
+    margin-left: 530px;
     padding-top: 48px;
   }
 }
@@ -561,13 +566,14 @@ footer {
 .contact {
   font-family: AvenirRegular;
   margin: 20px 16px 0px 16px;
-  color: white;
+  color: #e1e1e1;
   font-size: 13px;
   line-height: 18px;
 }
 
 .contact__name, .contact__title {
   font-family: AvenirDemi;
+  color: #ffffff;
 }
 
 .contact__title {
@@ -585,7 +591,7 @@ footer {
 .copyright {
   font-family: AvenirRegular;
   margin: 0px 16px;
-  color: white;
+  color: #e1e1e1;
   font-size: 13px;
   line-height: 18px;
   padding-bottom: 40px;
@@ -593,7 +599,6 @@ footer {
 
 @media screen and (min-width: 768px) {
   .contact {
-    font-family: AvenirRegular;
     margin: 40px 24px;
     font-size: 14px;
     line-height: 20px;
@@ -622,6 +627,12 @@ footer {
     line-height: 20px;
     padding-bottom: 40px;
     padding-top: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .copyright__flex {
+    padding-left: 5px;
   }
 }
 
