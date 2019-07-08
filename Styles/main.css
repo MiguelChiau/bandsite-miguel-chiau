@@ -492,29 +492,28 @@ footer {
     margin-right: 24px;
     margin-left: 24px;
   }
-  .logo {
-    padding-top: 0px;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    margin-left: 160px;
-  }
-  .icon {
-    padding-top: 0px;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
-  .icons {
-    margin-left: 48px;
-  }
-  .title {
+  .social__title {
     font-size: 36px;
     line-height: 44px;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    padding-top: 0px;
+    font-family: AvenirBold;
+    color: white;
+    padding-top: 60px;
+  }
+  .social__icons {
+    padding-top: 60px;
+  }
+  .social__icons-instagram {
+    margin-left: 48px;
+  }
+  .social__icons-facebook {
+    margin-left: 30px;
+  }
+  .social__icons-twitter {
+    margin-left: 24px;
+  }
+  .social__logo {
+    margin-left: 200px;
+    padding-top: 60px;
   }
 }
 
@@ -526,49 +525,40 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-left: 180px;
     margin-right: 180px;
+    margin-left: 180px;
   }
-  .logo {
-    padding-top: 0px;
+  .social__title {
+    font-size: 36px;
+    line-height: 44px;
+    font-family: AvenirBold;
+    color: white;
     padding-top: 48px;
-    margin-left: 0px;
+  }
+  .social__icons {
+    padding-top: 48px;
+  }
+  .social__icons-instagram {
+    margin-left: 48px;
+  }
+  .social__icons-facebook {
+    margin-left: 32px;
+  }
+  .social__icons-twitter {
+    margin-left: 32px;
+  }
+  .social__logo {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  .log {
-    width: 120px;
-    height: 24px;
-    margin-right: 180px;
-  }
-  .icon {
-    padding-top: 0px;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    padding-top: 48px;
-  }
-  .icons {
-    margin-left: 48px;
-  }
-  .title {
-    font-size: 36px;
-    line-height: 44px;
-    margin-left: px;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    margin-left: 500px;
     padding-top: 48px;
   }
 }
 
 .contact {
   font-family: AvenirRegular;
-  margin: 40px 16px;
+  margin: 20px 16px 0px 16px;
   color: white;
   font-size: 13px;
   line-height: 18px;
@@ -579,11 +569,11 @@ footer {
 }
 
 .contact__title {
-  padding-bottom: 32px;
+  padding-bottom: 25px;
 }
 
 .contact__location {
-  padding-bottom: 32px;
+  padding-bottom: 25px;
 }
 
 .contact__email {
@@ -602,40 +592,67 @@ footer {
 @media screen and (min-width: 768px) {
   .contact {
     font-family: AvenirRegular;
-    margin-top: 40px;
-    margin-right: 24px;
-    margin-left: 24px;
-    color: white;
+    margin: 40px 24px;
     font-size: 14px;
     line-height: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
   .contact__title {
+    padding-bottom: 28px;
+  }
+  .contact__location {
+    padding-bottom: 28px;
+  }
+  .contact__email {
+    padding-bottom: 32px;
+  }
+  .contact__one {
     margin-right: 24px;
+  }
+  .contact__two {
+    margin-right: 50px;
+  }
+  .copyright {
+    margin-left: 24px;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 40px;
+    padding-top: 0px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .contact {
-    font-family: AvenirRegular;
     margin-top: 56px;
     margin-right: 180px;
     margin-left: 180px;
-    color: white;
+    margin-bottom: 0px;
     font-size: 14px;
     line-height: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
   .contact__title {
-    margin-right: 24px;
+    margin-right: 48px;
+    padding-bottom: 24px;
+  }
+  .contact__email {
+    padding-bottom: 40px;
+  }
+  .contact__one {
+    margin-right: 50px;
+  }
+  .contact__two {
+    margin-right: 72px;
+  }
+  .copyright {
+    margin-left: 180px;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 48px;
   }
 }
 /*# sourceMappingURL=main.css.map */

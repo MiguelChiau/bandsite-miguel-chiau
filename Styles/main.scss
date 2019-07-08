@@ -466,28 +466,33 @@ footer {
     align-items: center;
     margin-right: 24px;
     margin-left: 24px;
-  }
 
-  .logo {
-    padding-top: 0px;
-    align-self: center;
-    margin-left: 160px;
-  }
+    &__title {
+      font-size: 36px;
+      line-height: 44px;
+      font-family: AvenirBold;
+      color: white;
+      padding-top: 60px;
+    }
 
-  .icon {
-    padding-top: 0px;
-    align-self: center;
-  }
+    &__icons {
+      padding-top: 60px;
 
-  .icons {
-    margin-left: 48px;
-  }
-  .title {
-    font-size: 36px;
-    line-height: 44px;
-    // margin-left: 24px;
-    align-self: center;
-    padding-top: 0px;
+      &-instagram {
+        margin-left: 48px;
+      }
+
+      &-facebook {
+        margin-left: 30px;
+      }
+      &-twitter {
+        margin-left: 24px;
+      }
+    }
+    &__logo {
+      margin-left: 200px;
+      padding-top: 60px;
+    }
   }
 }
 
@@ -496,57 +501,43 @@ footer {
   .social {
     display: flex;
     align-items: center;
+    margin-right: 180px;
     margin-left: 180px;
-    margin-right: 180px;
 
-    // justify-content: flex-start;
-  }
+    &__title {
+      font-size: 36px;
+      line-height: 44px;
+      font-family: AvenirBold;
+      color: white;
+      padding-top: 48px;
+    }
 
-  .logo {
-    padding-top: 0px;
-    // align-self: center;
-    padding-top: 48px;
-    // margin-left: 490px;
-    // margin-left: 180px;
+    &__icons {
+      padding-top: 48px;
 
-    margin-left: 0px;
-    // margin-right: 180px;
-    display: flex;
-    justify-content: flex-end;
-    // width: 120px;
-    // height: 24px;
-  }
+      &-instagram {
+        margin-left: 48px;
+      }
 
-  .log {
-    width: 120px;
-    height: 24px;
-    margin-right: 180px;
-    // margin-left: 490px;
-  }
-
-  .icon {
-    padding-top: 0px;
-    align-self: center;
-    padding-top: 48px;
-  }
-
-  .icons {
-    margin-left: 48px;
-  }
-  .title {
-    font-size: 36px;
-    line-height: 44px;
-    margin-left: px;
-    align-self: center;
-    padding-top: 48px;
+      &-facebook {
+        margin-left: 32px;
+      }
+      &-twitter {
+        margin-left: 32px;
+      }
+    }
+    &__logo {
+      display: flex;
+      margin-left: 500px;
+      padding-top: 48px;
+    }
   }
 }
 
 // Contact for MOBILE
-
 .contact {
   font-family: AvenirRegular;
-  margin: 40px 16px;
+  margin: 20px 16px 0px 16px;
   color: white;
   font-size: 13px;
   line-height: 18px;
@@ -557,10 +548,10 @@ footer {
   }
 
   &__title {
-    padding-bottom: 32px;
+    padding-bottom: 25px;
   }
   &__location {
-    padding-bottom: 32px;
+    padding-bottom: 25px;
   }
 
   &__email {
@@ -580,38 +571,69 @@ footer {
 @media screen and (min-width: 768px) {
   .contact {
     font-family: AvenirRegular;
-    margin-top: 40px;
-    margin-right: 24px;
-    margin-left: 24px;
-
-    color: white;
+    margin: 40px 24px;
     font-size: 14px;
     line-height: 20px;
     display: flex;
-    flex-wrap: wrap;
 
     &__title {
+      padding-bottom: 28px;
+    }
+    &__location {
+      padding-bottom: 28px;
+    }
+
+    &__email {
+      padding-bottom: 32px;
+    }
+
+    &__one {
       margin-right: 24px;
     }
+    &__two {
+      margin-right: 50px;
+    }
+  }
+  .copyright {
+    margin-left: 24px;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 40px;
+    padding-top: 0px;
   }
 }
 
 // Contact for DESKTOP
 @media screen and (min-width: 1440px) {
   .contact {
-    font-family: AvenirRegular;
     margin-top: 56px;
     margin-right: 180px;
     margin-left: 180px;
-
-    color: white;
+    margin-bottom: 0px;
     font-size: 14px;
     line-height: 20px;
     display: flex;
-    flex-wrap: wrap;
 
     &__title {
-      margin-right: 24px;
+      margin-right: 48px;
+      padding-bottom: 24px;
     }
+    &__email {
+      padding-bottom: 40px;
+    }
+
+    &__one {
+      margin-right: 50px;
+    }
+    &__two {
+      margin-right: 72px;
+    }
+  }
+
+  .copyright {
+    margin-left: 180px;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 48px;
   }
 }
