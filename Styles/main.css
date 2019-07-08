@@ -401,6 +401,13 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 16px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.images__all:hover {
+  -webkit-filter: none;
+          filter: none;
 }
 
 @media screen and (min-width: 768px) {

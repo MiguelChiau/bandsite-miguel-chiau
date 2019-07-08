@@ -5,7 +5,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // font-family: AvenirRegular;
 }
 
 // So far the nav bar is mobile friendly
@@ -42,6 +41,7 @@
     border-bottom: 5px solid transparent;
   }
 
+  // Hover effects on nav bar
   &-bio:hover,
   &-shows:hover {
     border-bottom: 5px solid $white;
@@ -386,7 +386,14 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 16px;
+
+    //This will apply greyscale by default to all images (Diving deeper)
+    filter: grayscale(100%);
   }
+}
+// This hover effect will remove the greyscale in each image (Diving deeper)
+.images__all:hover {
+  filter: none;
 }
 
 // photo gallert for TABLET
