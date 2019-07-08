@@ -586,6 +586,8 @@ footer {
 
 .contact__email {
   padding-bottom: 32px;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .copyright {
