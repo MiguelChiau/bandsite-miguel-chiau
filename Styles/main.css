@@ -478,7 +478,7 @@ footer {
 }
 
 .social__logo {
-  padding-top: 32px;
+  visibility: hidden;
 }
 
 @media screen and (min-width: 768px) {
@@ -512,6 +512,7 @@ footer {
     margin-left: 24px;
   }
   .social__logo {
+    visibility: visible;
     margin-left: 200px;
     padding-top: 60px;
   }
@@ -548,6 +549,7 @@ footer {
     margin-left: 32px;
   }
   .social__logo {
+    visibility: visible;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

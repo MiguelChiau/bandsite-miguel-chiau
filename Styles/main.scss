@@ -454,8 +454,9 @@ footer {
     }
   }
 
+  // This is to hide the logo on mobile
   &__logo {
-    padding-top: 32px;
+    visibility: hidden;
   }
 }
 
@@ -490,6 +491,7 @@ footer {
       }
     }
     &__logo {
+      visibility: visible;
       margin-left: 200px;
       padding-top: 60px;
     }
@@ -527,6 +529,7 @@ footer {
       }
     }
     &__logo {
+      visibility: visible;
       display: flex;
       margin-left: 500px;
       padding-top: 48px;
