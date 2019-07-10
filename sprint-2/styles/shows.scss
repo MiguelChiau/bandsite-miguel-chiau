@@ -1,0 +1,427 @@
+@import "./partials/fonts";
+@import "./partials/colors";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// So far the nav bar is mobile friendly
+.nav__container {
+  color: $mercury;
+  background: $black;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  font-family: AvenirRegular;
+
+  &-logo {
+    padding-top: 15px;
+    margin: 0;
+  }
+
+  &-items {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+  }
+
+  &-bio,
+  &-shows {
+    width: 50%;
+
+    text-decoration: none;
+    padding-bottom: 0.75em;
+    border-bottom: 5px solid transparent;
+  }
+
+  // Hover effects on nav bar
+  &-bio:hover,
+  &-shows:hover {
+    border-bottom: 5px solid $white;
+  }
+
+  a:hover,
+  a:active,
+  a:visited {
+    color: $white;
+  }
+}
+
+// Now to make it tablet friendly
+@media screen and (min-width: 768px) {
+  .nav__container {
+    flex-direction: row;
+    align-items: center;
+
+    &-logo {
+      padding-left: 24px;
+      align-items: center;
+      padding-top: 0px;
+    }
+    &-items {
+      justify-content: flex-start;
+      align-self: center;
+    }
+    &-bio,
+    &-shows {
+      padding-bottom: 1.5em;
+      align-self: center;
+      padding: 1.75em 0;
+      width: auto;
+      margin-left: 48px;
+    }
+  }
+}
+
+// Now to make it desktop friendly
+@media screen and (min-width: 1440px) {
+  .nav__container {
+    flex-direction: row;
+    align-items: center;
+
+    &-logo {
+      padding-left: 180px;
+
+      align-self: center;
+    }
+    &-items {
+      justify-content: flex-start;
+    }
+    &-bio,
+    &-shows {
+      padding-bottom: 1.5em;
+      align-self: center;
+      padding: 1.75em 0;
+      width: auto;
+      margin-left: 56px;
+    }
+  }
+}
+
+// The hero image for mobile
+.hero {
+  height: 472px;
+  width: 100%;
+  background-image: url("/Assets/Images/unsplash.jpg");
+  // This will make the background image to stretch and cover the full area
+  background-size: 100% 100%;
+  display: flex;
+  background-repeat: no-repeat;
+
+  &__text {
+    color: $white;
+    font-family: AvenirBold;
+    margin-left: 16px;
+
+    &-small {
+      padding-top: 64px;
+      padding-bottom: 30px;
+      font-size: 14px;
+      line-height: 12px;
+    }
+
+    &-big {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+}
+
+.shows {
+  margin-left: 16px;
+  margin-right: 16px;
+  font-size: 24px;
+  line-height: 32px;
+  font-family: AvenirBold;
+}
+
+// For tablet
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 670px;
+
+    &__text {
+      margin-left: 24px;
+
+      &-small {
+        font-size: 36px;
+        line-height: 44px;
+        padding-top: 96px;
+        padding-bottom: 80px;
+      }
+
+      &-big {
+        font-size: 60px;
+        line-height: 68px;
+      }
+    }
+  }
+}
+.shows {
+  margin-left: 24px;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+// For desktop
+@media screen and (min-width: 1440px) {
+  .hero {
+    height: 670px;
+
+    &__text {
+      margin-left: 24px;
+      margin-right: 24px;
+
+      &-small {
+        font-size: 24px;
+        line-height: 32px;
+        padding-top: 160spx;
+        padding-bottom: 48px;
+      }
+
+      &-big {
+        font-size: 60px;
+        line-height: 68px;
+      }
+    }
+  }
+
+  .shows {
+    margin-top: 48px;
+    margin-left: 180px;
+    margin-right: 180px;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: AvenirBold;
+  }
+
+  // footer on MOBILE, note that mobile version doesn't include logo on footer
+
+  footer {
+    background: $black;
+    font-family: AvenirRegular;
+  }
+
+  .social {
+    margin-left: 15px;
+    margin-right: 15px;
+
+    &__title {
+      font-size: 24px;
+      line-height: 32px;
+      font-family: AvenirBold;
+      color: $white;
+      padding-top: 60px;
+    }
+
+    &__icons {
+      padding-top: 32px;
+
+      &-instagram {
+        margin-right: 20px;
+      }
+
+      &-facebook {
+        margin-right: 20px;
+      }
+    }
+
+    // This is to hide the logo on mobile
+    &__logo {
+      visibility: hidden;
+    }
+  }
+
+  // footer on TABLET
+  @media screen and (min-width: 768px) {
+    .social {
+      display: flex;
+      align-items: center;
+      margin-right: 24px;
+      margin-left: 24px;
+
+      &__title {
+        font-size: 36px;
+        line-height: 44px;
+        padding-top: 60px;
+      }
+
+      &__icons {
+        padding-top: 60px;
+
+        &-instagram {
+          margin-left: 48px;
+        }
+
+        &-facebook {
+          margin-left: 30px;
+        }
+        &-twitter {
+          margin-left: 24px;
+        }
+      }
+      &__logo {
+        // Now to make the logo appear
+        visibility: visible;
+        margin-left: 180px;
+        padding-top: 60px;
+      }
+    }
+  }
+
+  // footer on DESKTOP
+  @media screen and (min-width: 1440px) {
+    .social {
+      display: flex;
+      align-items: center;
+      margin-right: 180px;
+      margin-left: 180px;
+
+      &__title {
+        font-size: 36px;
+        line-height: 44px;
+        padding-top: 48px;
+      }
+
+      &__icons {
+        padding-top: 48px;
+
+        &-instagram {
+          margin-left: 48px;
+        }
+
+        &-facebook {
+          margin-left: 32px;
+        }
+        &-twitter {
+          margin-left: 32px;
+        }
+      }
+      &__logo {
+        visibility: visible;
+        display: flex;
+        margin-left: 530px;
+        padding-top: 48px;
+      }
+    }
+  }
+
+  // Contact for MOBILE
+  .contact {
+    font-family: AvenirRegular;
+    margin: 20px 16px 0px 16px;
+    color: $mercury;
+    font-size: 13px;
+    line-height: 18px;
+
+    &__name,
+    &__title {
+      font-family: AvenirDemi;
+      color: $white;
+    }
+
+    &__title {
+      padding-bottom: 25px;
+    }
+    &__location {
+      padding-bottom: 25px;
+    }
+
+    &__email {
+      padding-bottom: 32px;
+      text-decoration: none;
+      color: $white;
+    }
+  }
+  .copyright {
+    font-family: AvenirRegular;
+    margin: 0px 16px;
+    color: $mercury;
+    font-size: 13px;
+    line-height: 18px;
+    padding-bottom: 40px;
+  }
+
+  // Contact for TABLET
+  @media screen and (min-width: 768px) {
+    .contact {
+      margin: 40px 24px;
+      font-size: 14px;
+      line-height: 20px;
+      display: flex;
+
+      &__title {
+        padding-bottom: 28px;
+      }
+      &__location {
+        padding-bottom: 28px;
+      }
+
+      &__email {
+        padding-bottom: 32px;
+      }
+
+      &__one {
+        margin-right: 24px;
+      }
+      &__two {
+        margin-right: 50px;
+      }
+    }
+    .copyright {
+      margin-left: 24px;
+      font-size: 14px;
+      line-height: 20px;
+      padding-bottom: 40px;
+      padding-top: 0px;
+
+      // This is to put the paragraphs on the same line
+      display: flex;
+      &__flex {
+        padding-left: 5px;
+      }
+    }
+  }
+
+  // Contact for DESKTOP
+  @media screen and (min-width: 1440px) {
+    .contact {
+      margin-top: 56px;
+      margin-right: 180px;
+      margin-left: 180px;
+      margin-bottom: 0px;
+      font-size: 14px;
+      line-height: 20px;
+      display: flex;
+
+      &__title {
+        margin-right: 48px;
+        padding-bottom: 24px;
+      }
+      &__email {
+        padding-bottom: 40px;
+      }
+
+      &__one {
+        margin-right: 50px;
+      }
+      &__two {
+        margin-right: 72px;
+      }
+    }
+
+    .copyright {
+      margin-left: 180px;
+      font-size: 14px;
+      line-height: 20px;
+      padding-bottom: 48px;
+    }
+  }
+}
