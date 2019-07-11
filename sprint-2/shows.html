@@ -29,8 +29,17 @@
           <p>x Phantom</p>
         </div>
 
-        <!-- The JS functionality for SoundCloud will come here -->
-        <div>SoundCloud</div>
+        <!-- This will play an song from SoundCloud -->
+        <div class="hero__song">
+          <iframe
+            width="100%"
+            height="80"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/341199320&color=%23494837&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+          ></iframe>
+        </div>
       </div>
     </section>
 
@@ -38,10 +47,10 @@
     <section class="shows">
       <h2 class="shows__title">Shows</h2>
 
-      I aim to create a single colum table
-      <table style="width:100%">
+      <!-- I aim to create a single colum table -->
+      <!-- <table style="width:100%">
         <tr>
-          <td>Date</td>
+          <td class="shows__date">Date</td>
         </tr>
 
         <tr>
@@ -62,8 +71,21 @@
 
         <tr>
           <td>San Francisco, CA</td>
-        </tr>
-      </table>
+        </tr> -->
+
+      <!-- <div class="show__table">
+          <tr>
+            <th>Date</th>
+            <th>Venue</th>
+            <th>Location</th>
+          </tr>
+          <tr>
+            <td>Mon Dec 17 2018</td>
+            <td>Ronald Lane</td>
+            <td>San Francisco, CA</td>
+          </tr>
+        </div> -->
+      <!-- </table> -->
     </section>
 
     <footer>
@@ -133,5 +155,6 @@
         <p class="copyright__flex">All Rights Reserved</p>
       </div>
     </footer>
+    <script src="shows.js"></script>
   </body>
 </html>

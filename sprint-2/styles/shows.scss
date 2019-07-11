@@ -136,6 +136,13 @@
     @include font__line__avenir(24px, 32px, AvenirBold);
     padding-bottom: 64px;
   }
+
+  &__song {
+    margin-left: 16px;
+    margin-right: 16px;
+    height: 80px;
+    width: 100%;
+  }
 }
 
 // Hero on TABLET
@@ -163,6 +170,10 @@
     padding-bottom: 40px;
     font-size: 14px;
     line-height: 22px;
+  }
+
+  &__table {
+    display: columm;
   }
 }
 
