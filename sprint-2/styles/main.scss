@@ -1,5 +1,8 @@
 @import "./partials/fonts";
+// @import "/sprint-2/styles/partials/fonts";
+
 @import "./partials/colors";
+// @import "/sprint-2/styles/partials/colors";
 
 * {
   margin: 0;
@@ -109,7 +112,7 @@
 .hero {
   height: 183px;
   width: 100%;
-  background-image: url("/Assets/Images/hero.jpg");
+  background-image: url("/sprint-2/assets/images/hero.jpg");
   // This will make the background image to stretch and cover the full area
   background-size: 100% 100%;
   display: flex;
