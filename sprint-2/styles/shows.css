@@ -153,19 +153,24 @@
   background-repeat: no-repeat;
 }
 
-.hero__artists {
-  color: #ffffff;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+.hero__text-small {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: AvenirDemi;
   margin-left: 16px;
+  margin-right: 16px;
+  color: #ffffff;
+  padding-top: 64px;
+}
+
+.hero__text-big {
   font-size: 24px;
   line-height: 32px;
   font-family: AvenirBold;
-}
-
-.hero__artists-name {
-  padding-bottom: 5px;
+  margin-left: 16px;
+  margin-right: 16px;
+  color: #ffffff;
+  padding-bottom: 64px;
 }
 
 @media screen and (min-width: 768px) {
@@ -178,6 +183,19 @@
   .hero {
     height: 670px;
   }
+}
+
+.shows {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.shows__title {
+  font-family: AvenirDemi;
+  padding-top: 32px;
+  padding-bottom: 40px;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 footer {

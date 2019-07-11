@@ -108,7 +108,16 @@
   }
 }
 
-// The hero image for mobile
+// This mixin will help to stay DRY for Mobile-Hero
+@mixin font__line__avenir($font, $line, $Avenir) {
+  font-size: $font;
+  line-height: $line;
+  font-family: $Avenir;
+  margin-left: 16px;
+  margin-right: 16px;
+  color: $white;
+}
+
 .hero {
   height: 472px;
   width: 100%;
@@ -118,17 +127,14 @@
   display: flex;
   background-repeat: no-repeat;
 
-  &__artists {
-    color: $white;
-    align-self: center;
-    margin-left: 16px;
-    font-size: 24px;
-    line-height: 32px;
-    font-family: AvenirBold;
+  &__text-small {
+    @include font__line__avenir(14px, 22px, AvenirDemi);
+    padding-top: 64px;
+  }
 
-    &-name {
-      padding-bottom: 5px;
-    }
+  &__text-big {
+    @include font__line__avenir(24px, 32px, AvenirBold);
+    padding-bottom: 64px;
   }
 }
 
@@ -143,6 +149,20 @@
 @media screen and (min-width: 1440px) {
   .hero {
     height: 670px;
+  }
+}
+
+// Shows section on MOBILE
+.shows {
+  margin-right: 16px;
+  margin-left: 16px;
+
+  &__title {
+    font-family: AvenirDemi;
+    padding-top: 32px;
+    padding-bottom: 40px;
+    font-size: 14px;
+    line-height: 22px;
   }
 }
 
