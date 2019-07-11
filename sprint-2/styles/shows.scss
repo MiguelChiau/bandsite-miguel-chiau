@@ -149,13 +149,60 @@
 @media screen and (min-width: 768px) {
   .hero {
     height: 670px;
+
+    &__text {
+      margin-right: 24px;
+      margin-left: 24px;
+
+      &-small {
+        @include font__line__avenir(24px, 32px, AvenirDemi);
+        padding-top: 96px;
+        padding-bottom: 60px;
+      }
+
+      &-big {
+        @include font__line__avenir(60px, 68px, AvenirBold);
+      }
+    }
+
+    &__song {
+      margin-left: 24px;
+      margin-right: 24px;
+      // height: 80px;
+    }
   }
 }
 
-// Hero on TABLET
+// Hero on DESKTOP
 @media screen and (min-width: 1440px) {
   .hero {
     height: 670px;
+
+    &__text {
+      margin-right: 180px;
+      margin-left: 180px;
+
+      &__text-small {
+        @include font__line__avenir(24px, 32px, AvenirDemi);
+        padding-top: 96px;
+        padding-bottom: 60px;
+      }
+
+      &__text-big {
+        @include font__line__avenir(60px, 68px, AvenirBold);
+        padding-bottom: 0px;
+      }
+    }
+
+    &__song {
+      width: 436px;
+      height: 146px;
+    }
+  }
+
+  .hero__box {
+    display: flex;
+    align-items: center;
   }
 }
 
