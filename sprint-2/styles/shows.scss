@@ -232,7 +232,11 @@
     }
   }
 
-  .show__divider {
+  // .show__divider {
+  //   border-bottom: 1px solid $silver;
+  // }
+
+  .divider {
     border-bottom: 1px solid $silver;
   }
 }
@@ -248,7 +252,8 @@
       line-height: 32px;
     }
   }
-  .show__divider {
+
+  .divider {
     border-bottom: 1px solid $silver;
   }
 }
@@ -350,13 +355,11 @@ button {
     text-align: center;
   }
 
-  // .show__divider1,
-  // .show__divider2,
-  // .show__divider3,
-  // .show__divider4,
-  // .show__divider5 {
-  //   border-bottom: 1px solid $silver;
-  // }
+  .divider {
+    border-bottom: 1px solid $silver;
+    // margin-left: 16px;
+    // margin-right: 16px;
+  }
 }
 
 // footer on MOBILE, note that mobile version doesn't include logo on footer
