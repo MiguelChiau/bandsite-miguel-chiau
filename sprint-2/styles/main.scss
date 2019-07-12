@@ -451,6 +451,50 @@
   }
 }
 
+// The Comments section on MOBILE
+.comments {
+  margin-left: 16px;
+  margin-right: 16px;
+
+  &__title {
+    padding-top: 32px;
+    padding-bottom: 40px;
+    font-family: AvenirBold;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+// The Comments section on TABLET
+@media screen and (min-width: 768px) {
+  .comments {
+    margin-left: 24px;
+    margin-right: 24px;
+
+    &__title {
+      padding-top: 50px;
+      padding-bottom: 60px;
+      font-size: 36px;
+      line-height: 44px;
+    }
+  }
+}
+
+// The Comments section on TABLET
+@media screen and (min-width: 1440px) {
+  .comments {
+    margin-left: 180px;
+    margin-right: 180px;
+
+    &__title {
+      padding-top: 48px;
+      padding-bottom: 56px;
+      font-size: 36px;
+      line-height: 44px;
+    }
+  }
+}
+
 // footer on MOBILE, note that mobile version doesn't include logo on footer
 
 footer {
