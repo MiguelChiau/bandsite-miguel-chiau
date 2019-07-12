@@ -139,9 +139,7 @@
 
   &__song {
     margin-left: 16px;
-    margin-right: 16px;
     height: 80px;
-    width: 100%;
   }
 }
 
@@ -167,7 +165,7 @@
 
     &__song {
       margin-left: 24px;
-      margin-right: 24px;
+      // margin-right: 24px;
       // height: 80px;
     }
   }
@@ -182,13 +180,13 @@
       margin-right: 180px;
       margin-left: 180px;
 
-      &__text-small {
+      &-small {
         @include font__line__avenir(24px, 32px, AvenirDemi);
         padding-top: 96px;
         padding-bottom: 60px;
       }
 
-      &__text-big {
+      &-big {
         @include font__line__avenir(60px, 68px, AvenirBold);
         padding-bottom: 0px;
       }
@@ -197,6 +195,7 @@
     &__song {
       width: 436px;
       height: 146px;
+      margin-left: 64px;
     }
   }
 
@@ -218,9 +217,74 @@
     font-size: 14px;
     line-height: 22px;
   }
+}
 
-  &__table {
-    display: columm;
+// This will be the table layout on TABLET AND DESKTOP
+table {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+table th,
+table td {
+  // padding: 0.625em;
+  padding: 16px;
+  text-align: center;
+}
+
+// on MOBILE
+@media screen and (max-width: 768px) {
+  table thead {
+    overflow: hidden;
+    // padding-top: 16px;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    display: block;
+  }
+
+  table td {
+    // border-bottom: 1px solid #ddd;
+    display: block;
+    text-align: left;
+    padding-bottom: 24px;
+    font-family: AvenirDemi;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .show__venue,
+  .show__location {
+    font-family: AvenirRegular;
+  }
+
+  // ::before is called a pseudo-element used to insert elements before the content
+  table td::before {
+    content: attr(data-label);
+    display: block;
+    padding-bottom: 16px;
+    color: $silver;
+    font-family: AvenirDemi;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  button {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: $black;
+    font-size: 12px;
+    line-height: 20px;
+    color: $white;
+    font-family: AvenirDemi;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
   }
 }
 

@@ -175,9 +175,7 @@
 
 .hero__song {
   margin-left: 16px;
-  margin-right: 16px;
   height: 80px;
-  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -208,7 +206,6 @@
   }
   .hero__song {
     margin-left: 24px;
-    margin-right: 24px;
   }
 }
 
@@ -220,7 +217,7 @@
     margin-right: 180px;
     margin-left: 180px;
   }
-  .hero__text__text-small {
+  .hero__text-small {
     font-size: 24px;
     line-height: 32px;
     font-family: AvenirDemi;
@@ -230,7 +227,7 @@
     padding-top: 96px;
     padding-bottom: 60px;
   }
-  .hero__text__text-big {
+  .hero__text-big {
     font-size: 60px;
     line-height: 68px;
     font-family: AvenirBold;
@@ -242,6 +239,7 @@
   .hero__song {
     width: 436px;
     height: 146px;
+    margin-left: 64px;
   }
   .hero__box {
     display: -webkit-box;
@@ -266,8 +264,62 @@
   line-height: 22px;
 }
 
-.shows__table {
-  display: columm;
+table {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+table th,
+table td {
+  padding: 16px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  table thead {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+  }
+  table tr {
+    display: block;
+  }
+  table td {
+    display: block;
+    text-align: left;
+    padding-bottom: 24px;
+    font-family: AvenirDemi;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .show__venue,
+  .show__location {
+    font-family: AvenirRegular;
+  }
+  table td::before {
+    content: attr(data-label);
+    display: block;
+    padding-bottom: 16px;
+    color: #afafaf;
+    font-family: AvenirDemi;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  button {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: #323232;
+    font-size: 12px;
+    line-height: 20px;
+    color: #ffffff;
+    font-family: AvenirDemi;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 footer {

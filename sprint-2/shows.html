@@ -32,6 +32,7 @@
 
           <div class="hero__song">
             <iframe
+              width="100%"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/341199320&color=%23494837&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
             ></iframe>
           </div>
@@ -43,45 +44,27 @@
     <section class="shows">
       <h2 class="shows__title">Shows</h2>
 
-      <!-- I aim to create a single colum table -->
-      <!-- <table style="width:100%">
-        <tr>
-          <td class="shows__date">Date</td>
-        </tr>
-
-        <tr>
-          <td>Mon Dec 17 2018</td>
-        </tr>
-
-        <tr>
-          <td>Venue</td>
-        </tr>
-
-        <tr>
-          <td>Ronald Lane</td>
-        </tr>
-
-        <tr>
-          <td>Location</td>
-        </tr>
-
-        <tr>
-          <td>San Francisco, CA</td>
-        </tr> -->
-
-      <!-- <div class="show__table">
-          <tr>
-            <th>Date</th>
-            <th>Venue</th>
-            <th>Location</th>
-          </tr>
-          <tr>
-            <td>Mon Dec 17 2018</td>
-            <td>Ronald Lane</td>
-            <td>San Francisco, CA</td>
-          </tr>
-        </div> -->
-      <!-- </table> -->
+      <div class="shows__table1">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Venue</th>
+              <th scope="col">Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Date">Mon Dec 17 2018</td>
+              <td data-label="Venue" class="show__venue">Ronald Lane</td>
+              <td data-label="Location" class="show__location">
+                San Francisco, CA
+              </td>
+              <td><button type="button">Buy Tickets</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <footer>
