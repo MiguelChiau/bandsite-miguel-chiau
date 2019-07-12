@@ -257,11 +257,40 @@
 }
 
 .shows__title {
-  font-family: AvenirDemi;
+  font-family: AvenirBold;
   padding-top: 32px;
   padding-bottom: 40px;
   font-size: 14px;
   line-height: 22px;
+  margin-left: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .shows {
+    margin-right: 24px;
+    margin-left: 24px;
+  }
+  .shows__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .shows__table1 {
+    border-bottom: 3px solid black;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .shows {
+    margin-right: 180px;
+    margin-left: 180px;
+  }
+  .shows__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .shows__table1 {
+    border-bottom: 3px solid black;
+  }
 }
 
 table {
@@ -276,9 +305,40 @@ table th,
 table td {
   padding: 16px;
   text-align: center;
+  padding-bottom: 24px;
+  font-family: AvenirDemi;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: left;
 }
 
-@media screen and (max-width: 768px) {
+.show__columns {
+  color: #afafaf;
+}
+
+.show__venue,
+.show__location {
+  font-family: AvenirRegular;
+}
+
+data-label {
+  color: #afafaf;
+}
+
+button {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: #323232;
+  font-size: 12px;
+  line-height: 20px;
+  color: #ffffff;
+  font-family: AvenirDemi;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
   table thead {
     overflow: hidden;
     position: absolute;
@@ -319,6 +379,9 @@ table td {
     border-radius: 10px;
     width: 100%;
     text-align: center;
+  }
+  .shows__table1 {
+    border-bottom: 3px solid black;
   }
 }
 

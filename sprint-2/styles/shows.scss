@@ -211,15 +211,49 @@
   margin-left: 16px;
 
   &__title {
-    font-family: AvenirDemi;
+    font-family: AvenirBold;
     padding-top: 32px;
     padding-bottom: 40px;
     font-size: 14px;
     line-height: 22px;
+    margin-left: 16px;
   }
 }
 
-// This will be the table layout on TABLET AND DESKTOP
+// Shows on TABLET
+@media screen and (min-width: 768px) {
+  .shows {
+    margin-right: 24px;
+    margin-left: 24px;
+
+    &__title {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &__table1 {
+      border-bottom: 3px solid black;
+    }
+  }
+}
+
+// Shows on DESKTOP
+@media screen and (min-width: 1440px) {
+  .shows {
+    margin-right: 180px;
+    margin-left: 180px;
+
+    &__title {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &__table1 {
+      border-bottom: 3px solid black;
+    }
+  }
+}
+
 table {
   border-collapse: collapse;
   margin: 0;
@@ -230,13 +264,45 @@ table {
 
 table th,
 table td {
-  // padding: 0.625em;
   padding: 16px;
+  text-align: center;
+  padding-bottom: 24px;
+  font-family: AvenirDemi;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: left;
+}
+
+.show__columns {
+  color: $silver;
+}
+
+.show__venue,
+.show__location {
+  font-family: AvenirRegular;
+}
+
+data-label {
+  color: $silver;
+}
+
+button {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: $black;
+  font-size: 12px;
+  line-height: 20px;
+  color: $white;
+  font-family: AvenirDemi;
+  border-radius: 10px;
+  width: 100%;
   text-align: center;
 }
 
+// This will be the table layout on DESKTOP
+
 // on MOBILE
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   table thead {
     overflow: hidden;
     // padding-top: 16px;
@@ -285,6 +351,10 @@ table td {
     border-radius: 10px;
     width: 100%;
     text-align: center;
+  }
+
+  .shows__table1 {
+    border-bottom: 3px solid black;
   }
 }
 
