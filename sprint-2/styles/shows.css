@@ -274,7 +274,7 @@
     font-size: 24px;
     line-height: 32px;
   }
-  .shows__table1 {
+  .shows__table {
     border-bottom: 3px solid black;
   }
 }
@@ -380,7 +380,7 @@ button {
     width: 100%;
     text-align: center;
   }
-  .shows__table1 {
+  .shows__table {
     border-bottom: 3px solid black;
   }
 }
