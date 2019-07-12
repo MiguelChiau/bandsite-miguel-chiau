@@ -230,10 +230,10 @@
       font-size: 24px;
       line-height: 32px;
     }
+  }
 
-    &__table {
-      border-bottom: 3px solid black;
-    }
+  .show__divider {
+    border-bottom: 1px solid $silver;
   }
 }
 
@@ -247,10 +247,9 @@
       font-size: 24px;
       line-height: 32px;
     }
-
-    &__table1 {
-      border-bottom: 3px solid black;
-    }
+  }
+  .show__divider {
+    border-bottom: 1px solid $silver;
   }
 }
 
@@ -298,8 +297,6 @@ button {
   width: 100%;
   text-align: center;
 }
-
-// This will be the table layout on DESKTOP
 
 // on MOBILE
 @media screen and (max-width: 767px) {
@@ -353,9 +350,13 @@ button {
     text-align: center;
   }
 
-  .shows__table {
-    border-bottom: 3px solid black;
-  }
+  // .show__divider1,
+  // .show__divider2,
+  // .show__divider3,
+  // .show__divider4,
+  // .show__divider5 {
+  //   border-bottom: 1px solid $silver;
+  // }
 }
 
 // footer on MOBILE, note that mobile version doesn't include logo on footer
