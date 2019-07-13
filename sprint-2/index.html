@@ -148,9 +148,26 @@
     <section class="comments">
       <h1 class="comments__title">Join the Conversation</h1>
 
-      <div class="comment">
-        <div class="comment__profile">image</div>
-        <div class="comment__author">text</div>
+      <!-- This is for adding comments -->
+      <div class="comments__input">
+        <div class="comments__input-image">ProfileIMAGE</div>
+
+        <form class="comments__input-content">
+          <div class="comments__input-name">
+            <!-- Autofocus will focus on this box -->
+            <label>NAME </label
+            ><input type="text" name="name" value="Mohan Muruge" autofocus />
+          </div>
+
+          <div class="comments__input-comment">
+            <label>COMMENT</label
+            ><input type="text" name="comment" value="Add a new comment" />
+          </div>
+
+          <div class="comments__input-button">
+            <label></label><input type="submit" name="button" value="COMMENT" />
+          </div>
+        </form>
       </div>
     </section>
 
