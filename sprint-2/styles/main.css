@@ -478,13 +478,55 @@
 }
 
 .comments__input-name, .comments__input-comment {
-  font-family: AvenirRegular;
+  font-family: AvenirDemi;
   color: #afafaf;
+  font-size: 12px;
+  line-height: 20px;
 }
 
 input,
 label {
   display: block;
+}
+
+.comments__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.comments__input-image {
+  margin-right: 24px;
+}
+
+.comments__input-button {
+  padding-bottom: 32px;
+}
+
+#name {
+  border: 2px solid #323232;
+  margin-bottom: 16px;
+}
+
+#comment {
+  border: 1px solid #afafaf;
+  margin-bottom: 16px;
+}
+
+input[type="text"],
+input[type="submit"] {
+  width: 224px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 10px;
+  border-radius: 8px;
+}
+
+input[type="submit"] {
+  background-color: #323232;
+  color: #ffffff;
 }
 
 @media screen and (min-width: 768px) {

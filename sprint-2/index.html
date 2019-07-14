@@ -152,22 +152,29 @@
       <div class="comments__input">
         <div class="comments__input-image">ProfileIMAGE</div>
 
-        <form class="comments__input-content">
-          <div class="comments__input-name">
-            <!-- Autofocus will focus on this box -->
-            <label>NAME </label
-            ><input type="text" name="name" value="Mohan Muruge" autofocus />
-          </div>
+        <div class="comments__input-content">
+          <form>
+            <div class="comments__input-name">
+              <label>NAME </label
+              ><input id="name" type="text" name="name" value="Mohan Muruge" />
+            </div>
 
-          <div class="comments__input-comment">
-            <label>COMMENT</label
-            ><input type="text" name="comment" value="Add a new comment" />
-          </div>
+            <div class="comments__input-comment">
+              <label>COMMENT</label
+              ><input
+                id="comment"
+                type="text"
+                name="comment"
+                value="Add a new comment"
+              />
+            </div>
 
-          <div class="comments__input-button">
-            <label></label><input type="submit" name="button" value="COMMENT" />
-          </div>
-        </form>
+            <div class="comments__input-button">
+              <label></label
+              ><input id="button" type="submit" name="button" value="COMMENT" />
+            </div>
+          </form>
+        </div>
       </div>
     </section>
 

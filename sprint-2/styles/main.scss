@@ -466,8 +466,10 @@
 
   &__input-name,
   &__input-comment {
-    font-family: AvenirRegular;
+    font-family: AvenirDemi;
     color: $silver;
+    font-size: 12px;
+    line-height: 20px;
   }
 
   // This will make the label on top of the input
@@ -475,6 +477,43 @@
 input,
 label {
   display: block;
+  // font-family: AvenirDemi;
+}
+
+.comments__input {
+  display: flex;
+  margin-left: 16px;
+  margin-right: 16px;
+
+  &-image {
+    margin-right: 24px;
+  }
+  &-button {
+    padding-bottom: 32px;
+  }
+}
+#name {
+  border: 2px solid $black;
+  margin-bottom: 16px;
+}
+
+#comment {
+  border: 1px solid $silver;
+  margin-bottom: 16px;
+}
+
+input[type="text"],
+input[type="submit"] {
+  width: 224px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 10px;
+  border-radius: 8px;
+}
+
+input[type="submit"] {
+  background-color: $black;
+  color: $white;
 }
 
 // .comment {
