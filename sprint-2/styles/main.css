@@ -477,6 +477,16 @@
   line-height: 32px;
 }
 
+.comments__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.comments__input-button {
+  padding-bottom: 32px;
+}
+
 .comments__input-name, .comments__input-comment {
   font-family: AvenirDemi;
   color: #afafaf;
@@ -487,46 +497,44 @@
 input,
 label {
   display: block;
-}
-
-.comments__input {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 16px;
-  margin-right: 16px;
-}
-
-.comments__input-image {
-  margin-right: 24px;
-}
-
-.comments__input-button {
-  padding-bottom: 32px;
+  padding-bottom: 8px;
 }
 
 #name {
   border: 2px solid #323232;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  height: 48px;
 }
 
 #comment {
   border: 1px solid #afafaf;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  width: 100%;
 }
 
-input[type="text"],
-input[type="submit"] {
+input[type="text"] {
   width: 224px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-top: 24px;
   padding-bottom: 24px;
-  padding-left: 10px;
+  padding-left: 16px;
   border-radius: 8px;
 }
 
 input[type="submit"] {
   background-color: #323232;
   color: #ffffff;
+  height: 48px;
+  border-radius: 8px;
+  width: 224px;
+}
+
+input[type="image"] {
+  width: 48px;
+  height: 48px;
+  border-radius: 50px;
+  margin-right: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -540,6 +548,23 @@ input[type="submit"] {
     font-size: 36px;
     line-height: 44px;
   }
+  .comments__input {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .comments #name {
+    margin-bottom: 24px;
+  }
+  .comments #comment {
+    margin-bottom: 24px;
+  }
+  .comments input[type="text"] {
+    width: 460px;
+  }
+  .comments input[type="submit"] {
+    float: right;
+    width: 160px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -552,6 +577,10 @@ input[type="submit"] {
     padding-bottom: 56px;
     font-size: 36px;
     line-height: 44px;
+  }
+  .comments__input {
+    margin-left: 276px;
+    margin-right: 238px;
   }
 }
 
