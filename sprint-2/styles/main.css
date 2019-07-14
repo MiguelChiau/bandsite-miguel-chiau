@@ -584,6 +584,14 @@ input[type="image"] {
   }
 }
 
+.chiau {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-family: AveniRegular;
+  font-size: 12px;
+  line-height: 20px;
+}
+
 footer {
   background: #323232;
   font-family: AvenirRegular;

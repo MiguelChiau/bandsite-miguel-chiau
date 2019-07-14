@@ -1,6 +1,6 @@
 // This array will include 3 objects with the defaults comments
 
-var defaultComments = [
+var comments = [
   {
     name: "Micheal Lyons",
     timestamp: "12/18/2018",
@@ -22,3 +22,25 @@ var defaultComments = [
       "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He's definitly my favorite ever!"
   }
 ];
+
+// This is to get our form from indexed.html
+var form = document.querySelector("#commentsForm");
+
+function displayComment(comment) {
+  var commentSection = document.querySelector("#commentTest");
+  var outerDiv = document.createElement("div");
+  outerDiv.setAttribute("class", "chiau");
+
+  var innerDiv = document.createElement("div");
+  innerDiv.innerText = comment.comment;
+  outerDiv.appendChild(innerDiv);
+  commentSection.prepend(outerDiv);
+}
+
+// The next step is to iterate through the Array
+
+for (var i = 0; i < comments.length; i++) {
+  displayComment(comments[i]);
+}
+
+console.log("test");
