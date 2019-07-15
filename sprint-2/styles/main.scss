@@ -589,7 +589,7 @@ input[type="image"] {
   padding-top: 20px;
   border-top: 1px solid $silver;
 
-  // font-family: AveniRegular;
+  font-family: AvenirRegular;
   font-size: 13px;
   line-height: 18px;
   display: flex;
@@ -599,10 +599,17 @@ input[type="image"] {
 
 .nameDate {
   display: flex;
-  font-family: AveniBold;
   justify-content: space-between;
   margin-bottom: 16px;
   margin-top: 30px;
+}
+
+.name {
+  font-family: AvenirBold;
+}
+
+.date {
+  color: $silver;
 }
 
 .profile {

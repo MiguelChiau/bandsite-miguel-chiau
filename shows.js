@@ -23,53 +23,54 @@ var defaultComments = [
   }
 ];
 
+function displayComment(commentObject) {
+  //we select our HTML section/ div by it's id
+  var commentSection = document.querySelector("#originalComments");
+  var outerDiv = document.createElement("div");
+
+  //now create a div for the profile icon
+  var profileDiv = document.createElement("div");
+  outerDiv.appendChild(profileDiv);
+  commentSection.prepend(outerDiv);
+  profileDiv.setAttribute("class", "profile");
+
+  //create an empty div to hold name+date and comment
+  var nameDateCommentDiv = document.createElement("div");
+  outerDiv.appendChild(nameDateCommentDiv);
+  commentSection.prepend(outerDiv);
+  nameDateCommentDiv.setAttribute("class", "nameDateComment");
+
+  //create an empty div to hold name+date
+  var nameDateDiv = document.createElement("div");
+  nameDateCommentDiv.appendChild(nameDateDiv);
+  commentSection.prepend(outerDiv);
+  nameDateDiv.setAttribute("class", "nameDate");
+
+  // div for the name
+  var nameDiv = document.createElement("div");
+  nameDiv.innerText = commentObject.name;
+  nameDateDiv.appendChild(nameDiv);
+  commentSection.prepend(outerDiv);
+  nameDiv.classList.add("name");
+
+  // div for the date
+  var dateDiv = document.createElement("div");
+  dateDiv.innerText = commentObject.timestamp;
+  nameDateDiv.appendChild(dateDiv);
+  commentSection.prepend(outerDiv);
+  dateDiv.classList.add("date");
+
+  //for the actual comment
+  var commentDiv = document.createElement("div");
+  commentDiv.innerText = commentObject.comment;
+  nameDateCommentDiv.appendChild(commentDiv);
+  commentSection.prepend(outerDiv);
+
+  // For test purposes
+  // outerDiv.setAttribute("class", "mainDiv");
+  outerDiv.classList.add("mainDiv");
+}
 // The next step is to iterate through the Array
 for (var i = 0; i < defaultComments.length; i++) {
   displayComment(defaultComments[i]);
-
-  function displayComment(commentObject) {
-    //we select our HTML section/ div by it's id
-    var commentSection = document.querySelector("#originalComments");
-    var outerDiv = document.createElement("div");
-
-    //now create a div for the profile icon
-    var profileDiv = document.createElement("div");
-    outerDiv.appendChild(profileDiv);
-    commentSection.prepend(outerDiv);
-    profileDiv.setAttribute("class", "profile");
-
-    //create an empty div to hold name+date and comment
-    var nameDateCommentDiv = document.createElement("div");
-    outerDiv.appendChild(nameDateCommentDiv);
-    commentSection.prepend(outerDiv);
-    nameDateCommentDiv.setAttribute("class", "nameDateComment");
-
-    //create an empty div to hold name+date
-    var nameDateDiv = document.createElement("div");
-    nameDateCommentDiv.appendChild(nameDateDiv);
-    commentSection.prepend(outerDiv);
-    nameDateDiv.setAttribute("class", "nameDate");
-
-    // div for the name
-    var nameDiv = document.createElement("div");
-    nameDiv.innerText = commentObject.name;
-    nameDateDiv.appendChild(nameDiv);
-    commentSection.prepend(outerDiv);
-
-    // div for the date
-    var dateDiv = document.createElement("div");
-    dateDiv.innerText = commentObject.timestamp;
-    nameDateDiv.appendChild(dateDiv);
-    commentSection.prepend(outerDiv);
-    // nameDiv.setAttribute("class", "dateUser");
-
-    //for the actual comment
-    var commentDiv = document.createElement("div");
-    commentDiv.innerText = commentObject.comment;
-    nameDateCommentDiv.appendChild(commentDiv);
-    commentSection.prepend(outerDiv);
-
-    // For test purposes
-    outerDiv.setAttribute("class", "mainDiv");
-  }
 }

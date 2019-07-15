@@ -588,6 +588,7 @@ input[type="image"] {
   padding-bottom: 20px;
   padding-top: 20px;
   border-top: 1px solid #afafaf;
+  font-family: AvenirRegular;
   font-size: 13px;
   line-height: 18px;
   display: -webkit-box;
@@ -601,12 +602,19 @@ input[type="image"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: AveniBold;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 16px;
   margin-top: 30px;
+}
+
+.name {
+  font-family: AvenirBold;
+}
+
+.date {
+  color: #afafaf;
 }
 
 .profile {
