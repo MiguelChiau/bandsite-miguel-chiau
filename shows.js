@@ -32,16 +32,30 @@ for (var i = 0; i < defaultComments.length; i++) {
     var commentSection = document.querySelector("#originalComments");
     var outerDiv = document.createElement("div");
 
+    //now create a div for the profile icon
+    var profileDiv = document.createElement("div");
+    outerDiv.appendChild(profileDiv);
+    commentSection.prepend(outerDiv);
+    profileDiv.setAttribute("class", "profile");
+
+    //create an empty div to hold name+date and comment
+    var nameDateCommentDiv = document.createElement("div");
+    outerDiv.appendChild(nameDateCommentDiv);
+    commentSection.prepend(outerDiv);
+    nameDateCommentDiv.setAttribute("class", "nameDateComment");
+
     //create an empty div to hold name+date
     var nameDateDiv = document.createElement("div");
-    outerDiv.appendChild(nameDateDiv);
+    nameDateCommentDiv.appendChild(nameDateDiv);
     commentSection.prepend(outerDiv);
+    nameDateDiv.setAttribute("class", "nameDate");
 
     // div for the name
     var nameDiv = document.createElement("div");
     nameDiv.innerText = commentObject.name;
     nameDateDiv.appendChild(nameDiv);
     commentSection.prepend(outerDiv);
+    nameDiv.setAttribute("class", "nameUser");
 
     // div for the date
     var dateDiv = document.createElement("div");
@@ -52,17 +66,10 @@ for (var i = 0; i < defaultComments.length; i++) {
     //for the actual comment
     var commentDiv = document.createElement("div");
     commentDiv.innerText = commentObject.comment;
-    outerDiv.appendChild(commentDiv);
+    nameDateCommentDiv.appendChild(commentDiv);
     commentSection.prepend(outerDiv);
-
-    //now create a div for the profile icon
-    var profileDiv = document.createElement("div");
-    // profileDiv.innerText = commentObject.comment;
-    outerDiv.appendChild(profileDiv);
-    commentSection.prepend(outerDiv);
-    profileDiv.setAttribute("class", "guelito");
 
     // For test purposes
-    outerDiv.setAttribute("class", "chiau");
+    outerDiv.setAttribute("class", "mainDiv");
   }
 }

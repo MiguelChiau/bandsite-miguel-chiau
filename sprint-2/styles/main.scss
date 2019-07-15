@@ -584,15 +584,23 @@ input[type="image"] {
 }
 
 // JavaScript Styling GOES HEREEEE!!!
-.chiau {
+.mainDiv {
   padding-bottom: 20px;
   padding-top: 20px;
   font-family: AveniRegular;
   font-size: 12px;
   line-height: 20px;
-  // display: flex;
+  display: flex;
+  margin-left: 16px;
+  margin-right: 16px;
 }
-.guelito {
+
+.nameDate {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile {
   width: 48px;
   height: 48px;
   border-radius: 50px;

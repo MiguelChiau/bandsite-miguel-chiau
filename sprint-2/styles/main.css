@@ -584,15 +584,29 @@ input[type="image"] {
   }
 }
 
-.chiau {
+.mainDiv {
   padding-bottom: 20px;
   padding-top: 20px;
   font-family: AveniRegular;
   font-size: 12px;
   line-height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
-.guelito {
+.nameDate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.profile {
   width: 48px;
   height: 48px;
   border-radius: 50px;
