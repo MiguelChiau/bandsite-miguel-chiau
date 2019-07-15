@@ -1,6 +1,6 @@
 // This array will include 3 objects with the defaults comments
 
-var comments = [
+var defaultComments = [
   {
     name: "Micheal Lyons",
     timestamp: "12/18/2018",
@@ -23,24 +23,31 @@ var comments = [
   }
 ];
 
-// This is to get our form from indexed.html
-var form = document.querySelector("#commentsForm");
-
-function displayComment(comment) {
-  var commentSection = document.querySelector("#commentTest");
-  var outerDiv = document.createElement("div");
-  outerDiv.setAttribute("class", "chiau");
-
-  var innerDiv = document.createElement("div");
-  innerDiv.innerText = comment.comment;
-  outerDiv.appendChild(innerDiv);
-  commentSection.prepend(outerDiv);
-}
-
 // The next step is to iterate through the Array
+for (var i = 0; i < defaultComments.length; i++) {
+  displayComment(defaultComments[i]);
 
-for (var i = 0; i < comments.length; i++) {
-  displayComment(comments[i]);
+  function displayComment(commentObject) {
+    //we select our HTML section/ div by it's id
+    var commentSection = document.querySelector("#originalComments");
+    var outerDiv = document.createElement("div");
+    var commentDiv = document.createElement("div");
+
+    // for the name
+    var nameDiv = document.createElement("div");
+    nameDiv.innerText = commentObject.name;
+    outerDiv.appendChild(nameDiv);
+    commentSection.prepend(outerDiv);
+
+    //for the actual comment
+    commentDiv.innerText = commentObject.comment;
+    outerDiv.appendChild(commentDiv);
+    commentSection.prepend(outerDiv);
+
+    // defaultComments.forEach(displayComment);
+    // function displayComment(defaultComments[1]) {
+    // }
+    // For test purposes
+    outerDiv.setAttribute("class", "chiau");
+  }
 }
-
-console.log("test");
