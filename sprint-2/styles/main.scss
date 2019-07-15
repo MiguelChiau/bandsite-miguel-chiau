@@ -587,9 +587,11 @@ input[type="image"] {
 .mainDiv {
   padding-bottom: 20px;
   padding-top: 20px;
-  font-family: AveniRegular;
-  font-size: 12px;
-  line-height: 20px;
+  border-top: 1px solid $silver;
+
+  // font-family: AveniRegular;
+  font-size: 13px;
+  line-height: 18px;
   display: flex;
   margin-left: 16px;
   margin-right: 16px;
@@ -597,7 +599,10 @@ input[type="image"] {
 
 .nameDate {
   display: flex;
+  font-family: AveniBold;
   justify-content: space-between;
+  margin-bottom: 16px;
+  margin-top: 30px;
 }
 
 .profile {
@@ -605,9 +610,33 @@ input[type="image"] {
   height: 48px;
   border-radius: 50px;
   margin-right: 20px;
+  margin-top: 24px;
   background-color: $silver;
+  // margin-right: 16px;
+  padding-right: 16px;
 }
 
+// The Comments section JS on TABLET
+@media screen and (min-width: 768px) {
+  .comments__input-button {
+    margin-bottom: 30px;
+  }
+  .mainDiv {
+    margin-right: 124px;
+    margin-left: 124px;
+  }
+}
+
+// The Comments section JS on DESKTOP
+@media screen and (min-width: 1440px) {
+  .comments__input-button {
+    margin-bottom: 30px;
+  }
+  .mainDiv {
+    margin-right: 280px;
+    margin-left: 276px;
+  }
+}
 // footer on MOBILE, note that mobile version doesn't include logo on footer
 
 footer {

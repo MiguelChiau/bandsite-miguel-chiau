@@ -55,13 +55,13 @@ for (var i = 0; i < defaultComments.length; i++) {
     nameDiv.innerText = commentObject.name;
     nameDateDiv.appendChild(nameDiv);
     commentSection.prepend(outerDiv);
-    nameDiv.setAttribute("class", "nameUser");
 
     // div for the date
     var dateDiv = document.createElement("div");
     dateDiv.innerText = commentObject.timestamp;
     nameDateDiv.appendChild(dateDiv);
     commentSection.prepend(outerDiv);
+    // nameDiv.setAttribute("class", "dateUser");
 
     //for the actual comment
     var commentDiv = document.createElement("div");

@@ -587,9 +587,9 @@ input[type="image"] {
 .mainDiv {
   padding-bottom: 20px;
   padding-top: 20px;
-  font-family: AveniRegular;
-  font-size: 12px;
-  line-height: 20px;
+  border-top: 1px solid #afafaf;
+  font-size: 13px;
+  line-height: 18px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -601,9 +601,12 @@ input[type="image"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-family: AveniBold;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 16px;
+  margin-top: 30px;
 }
 
 .profile {
@@ -611,7 +614,29 @@ input[type="image"] {
   height: 48px;
   border-radius: 50px;
   margin-right: 20px;
+  margin-top: 24px;
   background-color: #afafaf;
+  padding-right: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .comments__input-button {
+    margin-bottom: 30px;
+  }
+  .mainDiv {
+    margin-right: 124px;
+    margin-left: 124px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .comments__input-button {
+    margin-bottom: 30px;
+  }
+  .mainDiv {
+    margin-right: 280px;
+    margin-left: 276px;
+  }
 }
 
 footer {
