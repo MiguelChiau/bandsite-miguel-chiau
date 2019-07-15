@@ -592,6 +592,14 @@ input[type="image"] {
   line-height: 20px;
 }
 
+.guelito {
+  width: 48px;
+  height: 48px;
+  border-radius: 50px;
+  margin-right: 20px;
+  background-color: #afafaf;
+}
+
 footer {
   background: #323232;
   font-family: AvenirRegular;

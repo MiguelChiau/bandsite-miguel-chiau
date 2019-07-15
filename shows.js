@@ -55,6 +55,13 @@ for (var i = 0; i < defaultComments.length; i++) {
     outerDiv.appendChild(commentDiv);
     commentSection.prepend(outerDiv);
 
+    //now create a div for the profile icon
+    var profileDiv = document.createElement("div");
+    // profileDiv.innerText = commentObject.comment;
+    outerDiv.appendChild(profileDiv);
+    commentSection.prepend(outerDiv);
+    profileDiv.setAttribute("class", "guelito");
+
     // For test purposes
     outerDiv.setAttribute("class", "chiau");
   }

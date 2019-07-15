@@ -590,6 +590,14 @@ input[type="image"] {
   font-family: AveniRegular;
   font-size: 12px;
   line-height: 20px;
+  // display: flex;
+}
+.guelito {
+  width: 48px;
+  height: 48px;
+  border-radius: 50px;
+  margin-right: 20px;
+  background-color: $silver;
 }
 
 // footer on MOBILE, note that mobile version doesn't include logo on footer
