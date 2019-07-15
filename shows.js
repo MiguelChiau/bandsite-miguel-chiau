@@ -31,22 +31,30 @@ for (var i = 0; i < defaultComments.length; i++) {
     //we select our HTML section/ div by it's id
     var commentSection = document.querySelector("#originalComments");
     var outerDiv = document.createElement("div");
-    var commentDiv = document.createElement("div");
 
-    // for the name
+    //create an empty div to hold name+date
+    var nameDateDiv = document.createElement("div");
+    outerDiv.appendChild(nameDateDiv);
+    commentSection.prepend(outerDiv);
+
+    // div for the name
     var nameDiv = document.createElement("div");
     nameDiv.innerText = commentObject.name;
-    outerDiv.appendChild(nameDiv);
+    nameDateDiv.appendChild(nameDiv);
+    commentSection.prepend(outerDiv);
+
+    // div for the date
+    var dateDiv = document.createElement("div");
+    dateDiv.innerText = commentObject.timestamp;
+    nameDateDiv.appendChild(dateDiv);
     commentSection.prepend(outerDiv);
 
     //for the actual comment
+    var commentDiv = document.createElement("div");
     commentDiv.innerText = commentObject.comment;
     outerDiv.appendChild(commentDiv);
     commentSection.prepend(outerDiv);
 
-    // defaultComments.forEach(displayComment);
-    // function displayComment(defaultComments[1]) {
-    // }
     // For test purposes
     outerDiv.setAttribute("class", "chiau");
   }
