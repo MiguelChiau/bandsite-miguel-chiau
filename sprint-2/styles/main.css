@@ -509,7 +509,7 @@ label {
 #comment {
   border: 1px solid #afafaf;
   margin-bottom: 24px;
-  width: 100%;
+  height: 96px;
 }
 
 input[type="text"] {
@@ -553,12 +553,6 @@ input[type="image"] {
     margin-left: 100px;
     margin-right: 100px;
   }
-  .comments #name {
-    margin-bottom: 24px;
-  }
-  .comments #comment {
-    margin-bottom: 24px;
-  }
   .comments input[type="text"] {
     width: 460px;
   }
@@ -580,8 +574,8 @@ input[type="image"] {
     line-height: 44px;
   }
   .comments__input {
-    margin-left: 276px;
-    margin-right: 238px;
+    margin-left: 300px;
+    margin-right: 300px;
   }
 }
 
@@ -595,6 +589,7 @@ input[type="image"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 280px;
 }
 
 .nameDate {
@@ -634,11 +629,23 @@ input[type="image"] {
   .comments__input-button {
     margin-bottom: 30px;
   }
+  .mainDiv {
+    margin-right: 100px;
+    margin-left: 100px;
+    width: 528px;
+  }
+  .nameDateComment {
+    width: 460px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
   .comments__input-button {
     margin-bottom: 30px;
+  }
+  .mainDiv {
+    margin-left: 300px;
+    width: 528px;
   }
 }
 

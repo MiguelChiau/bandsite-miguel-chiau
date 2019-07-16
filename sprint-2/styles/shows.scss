@@ -1,8 +1,6 @@
 @import "./partials/fonts";
-// @import "/sprint-2/styles/partials/fonts";
 
 @import "./partials/colors";
-// @import "/sprint-2/styles/partials/colors";
 
 * {
   margin: 0;
@@ -165,8 +163,6 @@
 
     &__song {
       margin-left: 24px;
-      // margin-right: 24px;
-      // height: 80px;
     }
   }
 }
@@ -232,10 +228,6 @@
     }
   }
 
-  // .show__divider {
-  //   border-bottom: 1px solid $silver;
-  // }
-
   .divider {
     border-bottom: 1px solid $silver;
   }
@@ -250,11 +242,15 @@
     &__title {
       font-size: 24px;
       line-height: 32px;
+      padding-bottom: 0;
     }
   }
 
   .divider {
     border-bottom: 1px solid $silver;
+  }
+  .shows__table {
+    padding-left: 304px;
   }
 }
 
@@ -264,6 +260,7 @@ table {
   padding: 0;
   table-layout: fixed;
   width: 100%;
+  padding-left: 360px;
 }
 
 table th,
@@ -307,7 +304,6 @@ button {
 @media screen and (max-width: 767px) {
   table thead {
     overflow: hidden;
-    // padding-top: 16px;
     position: absolute;
     width: 1px;
   }
@@ -317,7 +313,6 @@ button {
   }
 
   table td {
-    // border-bottom: 1px solid #ddd;
     display: block;
     text-align: left;
     padding-bottom: 24px;

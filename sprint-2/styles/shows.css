@@ -287,9 +287,13 @@
   .shows__title {
     font-size: 24px;
     line-height: 32px;
+    padding-bottom: 0;
   }
   .divider {
     border-bottom: 1px solid #afafaf;
+  }
+  .shows__table {
+    padding-left: 304px;
   }
 }
 
@@ -299,6 +303,7 @@ table {
   padding: 0;
   table-layout: fixed;
   width: 100%;
+  padding-left: 360px;
 }
 
 table th,
