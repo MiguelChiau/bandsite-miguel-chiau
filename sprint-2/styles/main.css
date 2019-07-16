@@ -595,8 +595,6 @@ input[type="image"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 16px;
-  margin-right: 16px;
 }
 
 .nameDate {
@@ -610,6 +608,12 @@ input[type="image"] {
   margin-top: 30px;
 }
 
+.nameDateComment {
+  margin-left: 16px;
+  margin-bottom: 16px;
+  width: 224px;
+}
+
 .name {
   font-family: AvenirBold;
 }
@@ -621,31 +625,20 @@ input[type="image"] {
 .profile {
   width: 48px;
   height: 48px;
-  padding: 0;
   border-radius: 50%;
-  margin-right: 20px;
   margin-top: 24px;
   background-color: #afafaf;
-  padding-right: 16px;
 }
 
 @media screen and (min-width: 768px) {
   .comments__input-button {
     margin-bottom: 30px;
   }
-  .mainDiv {
-    margin-right: 124px;
-    margin-left: 124px;
-  }
 }
 
 @media screen and (min-width: 1440px) {
   .comments__input-button {
     margin-bottom: 30px;
-  }
-  .mainDiv {
-    margin-right: 280px;
-    margin-left: 276px;
   }
 }
 

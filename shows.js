@@ -46,7 +46,8 @@ function displayComment(commentObject) {
   var nameDateDiv = document.createElement("div");
   nameDateCommentDiv.appendChild(nameDateDiv);
   commentSection.prepend(outerDiv);
-  nameDateDiv.setAttribute("class", "nameDate");
+  // nameDateDiv.setAttribute("class", "nameDate");
+  nameDateDiv.classList.add("nameDate");
 
   // div for the name
   var nameDiv = document.createElement("div");

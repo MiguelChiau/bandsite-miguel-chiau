@@ -465,8 +465,6 @@
   }
   &__input {
     display: flex;
-    // margin-left: 16px;
-    // margin-right: 16px;
 
     &-button {
       padding-bottom: 32px;
@@ -497,9 +495,6 @@ label {
 #comment {
   border: 1px solid $silver;
   margin-bottom: 24px;
-  // padding-top: 24px;
-  // padding-bottom: 60px;
-  // height: 96px;
   width: 100%;
 }
 
@@ -594,8 +589,6 @@ input[type="image"] {
   font-size: 13px;
   line-height: 18px;
   display: flex;
-  margin-left: 16px;
-  margin-right: 16px;
 }
 
 .nameDate {
@@ -603,6 +596,12 @@ input[type="image"] {
   justify-content: space-between;
   margin-bottom: 16px;
   margin-top: 30px;
+}
+
+.nameDateComment {
+  margin-left: 16px;
+  margin-bottom: 16px;
+  width: 224px;
 }
 
 .name {
@@ -616,13 +615,9 @@ input[type="image"] {
 .profile {
   width: 48px;
   height: 48px;
-  padding: 0;
   border-radius: 50%;
-  margin-right: 20px;
   margin-top: 24px;
   background-color: $silver;
-  // margin-right: 16px;
-  padding-right: 16px;
 }
 
 // The Comments section JS on TABLET
@@ -631,8 +626,8 @@ input[type="image"] {
     margin-bottom: 30px;
   }
   .mainDiv {
-    margin-right: 124px;
-    margin-left: 124px;
+    // margin-right: 124px;
+    // margin-left: 124px;
   }
 }
 
@@ -642,8 +637,8 @@ input[type="image"] {
     margin-bottom: 30px;
   }
   .mainDiv {
-    margin-right: 280px;
-    margin-left: 276px;
+    // margin-right: 280px;
+    // margin-left: 276px;
   }
 }
 // footer on MOBILE, note that mobile version doesn't include logo on footer
