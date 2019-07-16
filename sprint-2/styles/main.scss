@@ -523,8 +523,9 @@ input[type="submit"] {
 input[type="image"] {
   width: 48px;
   height: 48px;
-  border-radius: 50px;
+  border-radius: 50%;
   margin-right: 20px;
+  padding: 0;
 }
 
 // The Comments section on TABLET
@@ -615,7 +616,8 @@ input[type="image"] {
 .profile {
   width: 48px;
   height: 48px;
-  border-radius: 50px;
+  padding: 0;
+  border-radius: 50%;
   margin-right: 20px;
   margin-top: 24px;
   background-color: $silver;

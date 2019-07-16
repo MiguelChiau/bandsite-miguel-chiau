@@ -24,8 +24,10 @@ var defaultComments = [
 ];
 
 function displayComment(commentObject) {
+  console.log(commentObject);
   //we select our HTML section/ div by it's id
   var commentSection = document.querySelector("#originalComments");
+  // document.getElementById("#originalComments").reset();
   var outerDiv = document.createElement("div");
 
   //now create a div for the profile icon
@@ -64,13 +66,43 @@ function displayComment(commentObject) {
   var commentDiv = document.createElement("div");
   commentDiv.innerText = commentObject.comment;
   nameDateCommentDiv.appendChild(commentDiv);
-  commentSection.prepend(outerDiv);
+  commentSection.appendChild(outerDiv);
 
   // For test purposes
-  // outerDiv.setAttribute("class", "mainDiv");
   outerDiv.classList.add("mainDiv");
 }
-// The next step is to iterate through the Array
-for (var i = 0; i < defaultComments.length; i++) {
-  displayComment(defaultComments[i]);
+
+// Get the form on HTML using DOM
+document.querySelector("form").addEventListener("submit", function(event) {
+  // This is to prevent the browser from reloading
+  event.preventDefault();
+
+  //Now to get the info that the user types in the form fields
+  const name = event.target.name.value;
+  const comment = event.target.comment.value;
+  // const timestamp = event.target.timestamp.value;
+
+  console.log(name, comment);
+
+  //now we want to push this info into an array
+  //Since we want new comments on top then I'll use unshift intead of push
+  defaultComments.unshift({
+    name: name,
+    comment: comment
+    // timestamp: timestamp
+  });
+
+  displayComments();
+  event.target.name.value = "";
+  event.target.comment.value = "";
+  console.log(defaultComments);
+});
+
+function displayComments() {
+  console.log(defaultComments);
+  document.querySelector("#originalComments").innerHTML = "";
+  for (var i = 0; i < defaultComments.length; i++) {
+    displayComment(defaultComments[i]);
+  }
 }
+displayComments();
