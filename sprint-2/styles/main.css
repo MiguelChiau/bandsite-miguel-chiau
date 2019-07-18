@@ -1,16 +1,16 @@
 @font-face {
   font-family: AvenirRegular;
-  src: url("/sprint-2/assets/fonts/AvenirNextLTPro-Regular.otf");
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
 }
 
 @font-face {
   font-family: AvenirDemi;
-  src: url("/sprint-2/assets/fonts/AvenirNextLTPro-Demi.otf");
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf");
 }
 
 @font-face {
   font-family: AvenirBold;
-  src: url("/sprint-2/assets/fonts/AvenirNextLTPro-Bold.otf");
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
 }
 
 * {
@@ -145,7 +145,7 @@
 .hero {
   height: 183px;
   width: 100%;
-  background-image: url("/sprint-2/assets/images/hero.jpg");
+  background-image: url("../assets/images/hero.jpg");
   background-size: 100% 100%;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -1,6 +1,6 @@
-@import "./partials/fonts";
+@import "../styles/partials/fonts";
 
-@import "./partials/colors";
+@import "../styles/partials/colors";
 
 * {
   margin: 0;
@@ -119,7 +119,9 @@
 .hero {
   height: 472px;
   width: 100%;
-  background-image: url("/sprint-2/assets/images/unsplash.jpg");
+  // background-image: url("/sprint-2/assets/images/unsplash.jpg");
+  background-image: url("../assets/images/unsplash.jpg");
+
   // This will make the background image to stretch and cover the full area
   background-size: 100% 100%;
   display: flex;
