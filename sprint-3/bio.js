@@ -42,8 +42,8 @@ function displayComment(commentObject) {
 
   // div for the date
   var dateDiv = document.createElement("div");
-  dateDiv.innerText = commentObject.timestamp;
-  nameDateDiv.appendChild(dateDiv);
+  dateDiv.innerText = convertTimestamp(commentObject.timestamp);
+  var timestamp = nameDateDiv.appendChild(dateDiv);
   dateDiv.classList.add("date");
 
   //for the actual comment
@@ -83,4 +83,13 @@ function displayAllComments(defaultComments) {
   for (var i = defaultComments.length - 1; i >= 0; i--) {
     displayComment(defaultComments[i]);
   }
+}
+
+//This is to convert the epoch timestamp to full date
+function convertTimestamp(epochTime) {
+  const date = new Date(epochTime);
+  const newDate =
+    date.getMonth() + 1 + "/" + date.getDate() + "/" + date.getFullYear();
+
+  return newDate;
 }
