@@ -60,21 +60,36 @@ document.querySelector("form").addEventListener("submit", function(event) {
   const comment = event.target.comment.value;
 
   // The POST request to post new comments
-  axios.post(commentsURL, {
+  const postPromise = axios.post(commentsURL, {
     name: name,
     comment: comment
   });
 
-  promise.then(response => {
-    displayAllComments(response.data);
+  postPromise.then(response => {
+    // console.log(response.data);
+
+    //I make a GET request for all comments
+    const promise = axios.get(commentsURL);
+    promise.then(response => {
+      displayAllComments(response.data);
+    });
   });
 
-  //I want this to take new comments to the top of the array
-  // displayAllComments.unshift({
-  //   name: name,
-  //   comment: comment
-  // });
+  // This will clear the old input
+  event.target.name.value = "";
+  event.target.comment.value = "";
 });
+
+//PUT request
+// axios.put(commentsURL, {
+//   id: ":167bc98b-43d8-4f4c-9608-baa007c38c0f",
+//   comment: comment,
+//   name: name
+// });
+
+// promise.then(response => {
+//   displayAllComments(response.data);
+// });
 
 function displayAllComments(defaultComments) {
   console.log(defaultComments);
