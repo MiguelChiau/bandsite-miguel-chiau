@@ -64,18 +64,15 @@ document.querySelector("form").addEventListener("submit", function(event) {
     name: name,
     comment: comment
   });
-
   postPromise.then(response => {
-    // console.log(response.data);
-
-    //I make a GET request for all comments
+    //I make another GET request for all comments
     const promise = axios.get(commentsURL);
     promise.then(response => {
       displayAllComments(response.data);
     });
   });
 
-  // This will clear the old input
+  // This will clear the old comments in the input filds
   event.target.name.value = "";
   event.target.comment.value = "";
 });
@@ -94,7 +91,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
 function displayAllComments(defaultComments) {
   console.log(defaultComments);
   document.querySelector("#originalComments").innerHTML = "";
-  for (var i = 0; i < defaultComments.length; i++) {
+  for (var i = defaultComments.length - 1; i >= 0; i--) {
     displayComment(defaultComments[i]);
   }
 }
