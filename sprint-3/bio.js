@@ -108,3 +108,14 @@ putPromise.then(response => {
 
   console.log(response.data);
 });
+
+//DELETE comments
+const commentID = "2711bac6-2979-444a-8c57-0ea12b525f94";
+const deleteURL = `https://project-1-api.herokuapp.com/comments/${commentID}?api_key=${myKey}`;
+
+const deletePromise = axios.delete(deleteURL, {});
+deletePromise.then(response => {
+  //   displayAllComments(response.data);
+
+  console.log(response.data);
+});
