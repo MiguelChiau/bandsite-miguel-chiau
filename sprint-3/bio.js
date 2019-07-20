@@ -2,7 +2,7 @@
 const URL = "https://project-1-api.herokuapp.com/";
 
 // The first I requested the API key through the browser
-var myKey = "61660787-78cb-44fa-b89d-c4003c1e91bc";
+var myKey = "15ec4905 - 237c - 4055 - ae1a - 83224a9e1d24";
 
 const commentsURL = `https://project-1-api.herokuapp.com/comments?api_key=${myKey}`;
 
@@ -93,3 +93,18 @@ function convertTimestamp(epochTime) {
 
   return newDate;
 }
+
+// PUT request for likes by user Miguel
+const miguelID = "b1de2092-cd2c-412e-8e92-8f5eea67013a";
+
+const likesURL = `https://project-1-api.herokuapp.com/comments/${miguelID}/like?api_key=${myKey}`;
+
+const putPromise = axios.put(likesURL, {
+  name: name,
+  comment: comment
+});
+putPromise.then(response => {
+  //   displayAllComments(response.data);
+
+  console.log(response.data);
+});
