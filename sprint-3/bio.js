@@ -20,7 +20,8 @@ function displayComment(commentObject) {
   outerDiv.classList.add("mainDiv");
 
   //now create a div for the profile icon
-  var profileDiv = document.createElement("div");
+  var profileDiv = document.createElement("IMG");
+  profileDiv.setAttribute("src", "../assets/images/avatar.png");
   outerDiv.appendChild(profileDiv);
   profileDiv.setAttribute("class", "profile");
 
@@ -91,31 +92,33 @@ function convertTimestamp(epochTime) {
   const newDate =
     date.getMonth() + 1 + "/" + date.getDate() + "/" + date.getFullYear();
 
+  // date.now() - 11 * 1000 * 60 * 60;
+
   return newDate;
 }
 
-// PUT request for likes by user Miguel
-const miguelID = "b1de2092-cd2c-412e-8e92-8f5eea67013a";
+// // PUT request for likes by user Miguel
+// const miguelID = "b1de2092-cd2c-412e-8e92-8f5eea67013a";
 
-const likesURL = `https://project-1-api.herokuapp.com/comments/${miguelID}/like?api_key=${myKey}`;
+// const likesURL = `https://project-1-api.herokuapp.com/comments/${miguelID}/like?api_key=${myKey}`;
 
-const putPromise = axios.put(likesURL, {
-  name: name,
-  comment: comment
-});
-putPromise.then(response => {
-  //   displayAllComments(response.data);
+// const putPromise = axios.put(likesURL, {
+//   name: name,
+//   comment: comment
+// });
+// putPromise.then(response => {
+//   //   displayAllComments(response.data);
 
-  console.log(response.data);
-});
+//   console.log(response.data);
+// });
 
-//DELETE comments
-const commentID = "2711bac6-2979-444a-8c57-0ea12b525f94";
-const deleteURL = `https://project-1-api.herokuapp.com/comments/${commentID}?api_key=${myKey}`;
+// //DELETE comments
+// const commentID = "1a34c118-5199-4ea3-9adc-0859770281ab";
+// const deleteURL = `https://project-1-api.herokuapp.com/comments/${commentID}?api_key=${myKey}`;
 
-const deletePromise = axios.delete(deleteURL, {});
-deletePromise.then(response => {
-  //   displayAllComments(response.data);
+// const deletePromise = axios.delete(deleteURL, {});
+// deletePromise.then(response => {
+//   //   displayAllComments(response.data);
 
-  console.log(response.data);
-});
+//   console.log(response.data);
+// });

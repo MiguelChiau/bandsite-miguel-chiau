@@ -622,7 +622,6 @@ input[type="image"] {
   height: 48px;
   border-radius: 50%;
   margin-top: 24px;
-  background-color: #afafaf;
 }
 
 @media screen and (min-width: 768px) {

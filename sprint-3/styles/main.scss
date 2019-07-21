@@ -112,7 +112,6 @@
 .hero {
   height: 183px;
   width: 100%;
-  // background-image: url("/sprint-2/assets/images/hero.jpg");
   background-image: url("../assets/images/hero.jpg");
 
   // This will make the background image to stretch and cover the full area
@@ -613,7 +612,7 @@ input[type="image"] {
   height: 48px;
   border-radius: 50%;
   margin-top: 24px;
-  background-color: $silver;
+  // background-color: $silver;
 }
 
 // The Comments section JS on TABLET
