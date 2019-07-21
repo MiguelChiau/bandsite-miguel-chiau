@@ -12,12 +12,22 @@ showsPromise.then(response => {
 function allShows(shows) {
   for (let i = 0; i < shows.length; i++) {
     console.log(shows[i]);
+
+    //This is to capitalize only the first letter on dates
+    function titleCase(str) {
+      let words = str.split(" ");
+      const capitalizedWords = words.map(word => {
+        return word[0].toUpperCase() + word.toLowerCase().substring(1);
+      });
+      return capitalizedWords.join(" ");
+    }
+
     document.querySelector("tbody").innerHTML += `<tr class="divider">
-                <td data-label="Date">${shows[i].date}</td>
-                <td data-label="Venue" class="show__venue">${
+                <td data-label="DATE">${titleCase(shows[i].date)}</td>
+                <td data-label="VENUE" class="show__venue">${
                   shows[i].place
                 }</td>
-                <td data-label="Location" class="show__location">
+                <td data-label="LOCATION" class="show__location">
                   ${shows[i].location}
                 </td>
   
