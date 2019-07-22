@@ -52,13 +52,6 @@ function displayComment(commentObject) {
   commentDiv.innerText = commentObject.comment;
   nameDateCommentDiv.appendChild(commentDiv);
   commentSection.appendChild(outerDiv);
-
-  //Delete button
-  var btn = document.createElement("BUTTON");
-  btn.innerHTML = "DELETE";
-  nameDateCommentDiv.appendChild(btn);
-  btn.classList.add("delete");
-  // profileDiv.setAttribute("background-color", "black");
 }
 
 document.querySelector("form").addEventListener("submit", function(event) {
@@ -98,34 +91,31 @@ function convertTimestamp(epochTime) {
   const date = new Date(epochTime);
   const newDate =
     date.getMonth() + 1 + "/" + date.getDate() + "/" + date.getFullYear();
-
-  // date.now() - 11 * 1000 * 60 * 60;
-
   return newDate;
 }
 
 // PUT request for likes by user Miguel
-const miguelID = "b1de2092-cd2c-412e-8e92-8f5eea67013a";
+// const miguelID = "a747269e-688c-43d4-a88d-0c6c2f665ceb";
 
-const likesURL = `https://project-1-api.herokuapp.com/comments/${miguelID}/like?api_key=${myKey}`;
+// const likesURL = `https://project-1-api.herokuapp.com/comments/${miguelID}/like?api_key=${myKey}`;
 
-const putPromise = axios.put(likesURL, {
-  name: name,
-  comment: comment
-});
-putPromise.then(response => {
-  //   displayAllComments(response.data);
+// const putPromise = axios.put(likesURL, {
+//   name: name,
+//   comment: comment
+// });
+// putPromise.then(response => {
+//   //   displayAllComments(response.data);
 
-  console.log(response.data);
-});
+//   console.log(response.data);
+// });
 
 //DELETE comments
-const commentID = "1a34c118-5199-4ea3-9adc-0859770281ab";
-const deleteURL = `https://project-1-api.herokuapp.com/comments/${commentID}?api_key=${myKey}`;
+// const commentID = "606227fc-f29a-443e-baec-c393887c39f4";
+// const deleteURL = `https://project-1-api.herokuapp.com/comments/${commentID}?api_key=${myKey}`;
 
-const deletePromise = axios.delete(deleteURL, {});
-deletePromise.then(response => {
-  //   displayAllComments(response.data);
+// const deletePromise = axios.delete(deleteURL, {});
+// deletePromise.then(response => {
+//   displayAllComments(response.data);
 
-  console.log(response.data);
-});
+//   // console.log(response.data);
+// });
