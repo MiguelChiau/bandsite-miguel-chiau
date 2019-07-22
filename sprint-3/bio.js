@@ -1,12 +1,12 @@
 // Below is the URL for the API
 const URL = "https://project-1-api.herokuapp.com/";
 
-// The first I requested the API key through the browser
+// First I requested the API key through the browser
 var myKey = "15ec4905 - 237c - 4055 - ae1a - 83224a9e1d24";
 
 const commentsURL = `https://project-1-api.herokuapp.com/comments?api_key=${myKey}`;
 
-//Sending a request to GET comments, note that "fullURL" includes "/comments"
+//Sending a GET request for the comments, note that "fullURL" includes "/comments"
 const promise = axios.get(commentsURL);
 promise.then(response => {
   displayAllComments(response.data);
@@ -73,7 +73,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
     });
   });
 
-  // This will clear the old comments in the input filds
+  // This will clear the old comments in the input fields
   event.target.name.value = "";
   event.target.comment.value = "";
 });
@@ -86,7 +86,7 @@ function displayAllComments(defaultComments) {
   }
 }
 
-//This is to convert the epoch timestamp to full date
+//This is to convert the epoch timestamp to a full date format
 function convertTimestamp(epochTime) {
   const date = new Date(epochTime);
   const newDate =
