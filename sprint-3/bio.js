@@ -52,6 +52,13 @@ function displayComment(commentObject) {
   commentDiv.innerText = commentObject.comment;
   nameDateCommentDiv.appendChild(commentDiv);
   commentSection.appendChild(outerDiv);
+
+  //Delete button
+  var btn = document.createElement("BUTTON");
+  btn.innerHTML = "DELETE";
+  nameDateCommentDiv.appendChild(btn);
+  btn.classList.add("delete");
+  // profileDiv.setAttribute("background-color", "black");
 }
 
 document.querySelector("form").addEventListener("submit", function(event) {

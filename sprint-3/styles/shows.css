@@ -259,7 +259,7 @@
 .shows__title {
   font-family: AvenirBold;
   padding-top: 32px;
-  padding-bottom: 40px;
+  margin-bottom: 24px;
   font-size: 14px;
   line-height: 22px;
   margin-left: 16px;
@@ -288,6 +288,8 @@
     font-size: 24px;
     line-height: 32px;
     padding-bottom: 0;
+    margin-bottom: 0px;
+    margin-top: 48px;
   }
   .divider {
     border-bottom: 1px solid #afafaf;

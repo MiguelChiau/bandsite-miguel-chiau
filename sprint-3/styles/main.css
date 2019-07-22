@@ -624,6 +624,15 @@ input[type="image"] {
   margin-top: 24px;
 }
 
+.delete {
+  background-color: #323232;
+  color: #ffffff;
+  height: 30px;
+  width: 60px;
+  border-radius: 8px;
+  margin-top: 24px;
+}
+
 @media screen and (min-width: 768px) {
   .comments__input-button {
     margin-bottom: 30px;

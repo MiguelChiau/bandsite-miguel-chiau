@@ -425,7 +425,7 @@
   }
 }
 
-// photo gallert for DESKTOP
+// photo gallery for DESKTOP
 @media screen and (min-width: 1440px) {
   .gallery {
     padding-top: 48px;
@@ -479,7 +479,6 @@
       line-height: 20px;
     }
   }
-  // This will make the label on top of the input
 }
 input,
 label {
@@ -613,6 +612,15 @@ input[type="image"] {
   border-radius: 50%;
   margin-top: 24px;
   // background-color: $silver;
+}
+
+.delete {
+  background-color: $black;
+  color: $white;
+  height: 30px;
+  width: 60px;
+  border-radius: 8px;
+  margin-top: 24px;
 }
 
 // The Comments section JS on TABLET
